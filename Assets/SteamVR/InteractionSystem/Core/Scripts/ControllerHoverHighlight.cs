@@ -13,6 +13,7 @@ namespace Valve.VR.InteractionSystem
 	public class ControllerHoverHighlight : MonoBehaviour
 	{
 		public Material highLightMaterial;
+        // Haptics: the feeling of We touch things
 		public bool fireHapticsOnHightlight = true;
 
 		private Hand hand;
@@ -155,7 +156,7 @@ namespace Valve.VR.InteractionSystem
 
 			if ( fireHapticsOnHightlight )
 			{
-				hand.controller.TriggerHapticPulse( 500 );
+				hand.controller.TriggerHapticPulse( 2000 );
 			}
 
 			if ( bodyMeshRenderer != null )
