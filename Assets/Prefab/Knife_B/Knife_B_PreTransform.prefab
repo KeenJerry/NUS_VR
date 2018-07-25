@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114148437806314158}
   - component: {fileID: 114104394509085466}
   - component: {fileID: 114751133807352080}
+  - component: {fileID: 114935994903256408}
   m_Layer: 0
   m_Name: Knife_B_PreTransform
   m_TagString: Untagged
@@ -68,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1033824743598966}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -1.6, z: -0.7}
+  m_LocalPosition: {x: 0, y: -1.6, z: 0.4}
   m_LocalScale: {x: 7.5178, y: 7.5178075, z: 7.5178075}
   m_Children: []
   m_Father: {fileID: 4352577416799002}
@@ -179,3 +180,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb6d6653511aff5409d0827d4e3b79ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114935994903256408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1786127977677216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8d4cc6cf300b3e4bb1411c4e041030c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportAllowed: 1
+  overrideHoverLock: 1
