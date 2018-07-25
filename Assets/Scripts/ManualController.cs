@@ -14,6 +14,8 @@ public class ManualController : MonoBehaviour {
     public float showWidth = 10;
     private Transform camera;
 
+    public LaunchFood launcher;
+
     private int pageIndex = -1;
     private int newPageIndex = -1;
     public float switchInterval = 0.5f;
@@ -25,15 +27,14 @@ public class ManualController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        if (switchInterval <= 0) switchInterval = 0.5f;
+        bufferTime = switchInterval - 0.05f;
         manuals = FoodSet.manuals;
         camera = GameObject.Find("Camera").transform;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetAxis("Horizontal") > 0) nextPage();
-        else if (Input.GetAxis("Horizontal") < 0) previewPage();
-
         if (!canSwitch)
         {
             bufferTime += Time.deltaTime;
@@ -88,6 +89,15 @@ public class ManualController : MonoBehaviour {
                 bufferTime = 0;
                 newPageIndex = pageIndex + 1;
                 isSwitched = false;
+            }
+    }
+
+    public void chooseManual()
+    {
+        if (canSwitch)
+            if (pageIndex >= 0 && pageIndex < manuals.Length)
+            {
+                launcher.setManual(pageIndex);
             }
     }
 
