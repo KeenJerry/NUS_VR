@@ -15,9 +15,9 @@ public class MainMenu : MonoBehaviour {
 		btnName.Add ("sourceButton");
 		btnName.Add ("volumnButton");
 
-		foreach(string btnName in btnName )
+		foreach(string Name in btnName )
 		{
-			GameObject btnObj= GameObject .Find(btnName);
+			GameObject btnObj= GameObject .Find(Name);
 			Button btn = btnObj.GetComponent<Button>();
 			btn.onClick.AddListener (delegate() { 
 				this.OnClick(btnObj);
