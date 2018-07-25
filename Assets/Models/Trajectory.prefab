@@ -1,0 +1,175 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1607842778142862}
+  m_IsPrefabParent: 1
+--- !u!1 &1405878177265938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4394882628328660}
+  m_Layer: 0
+  m_Name: Foods
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1607842778142862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4236131040677138}
+  - component: {fileID: 114465821624602610}
+  - component: {fileID: 114657230099148152}
+  m_Layer: 0
+  m_Name: Trajectory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1700979697482208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4733249754505178}
+  m_Layer: 0
+  m_Name: Pieces
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4236131040677138
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1607842778142862}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -56.35, y: 4.38, z: -7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4394882628328660}
+  - {fileID: 4733249754505178}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4394882628328660
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1405878177265938}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4236131040677138}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4733249754505178
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1700979697482208}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4236131040677138}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114465821624602610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1607842778142862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe75a3411fdb274a90b77be584cbf2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objs:
+  - {fileID: 1714018728180330, guid: 975355bdde6ea4122a9cdcf23c8aceaf, type: 2}
+  - {fileID: 1255057093998440, guid: f0ee1bc6d0d7d49cc9a933f0d3a104c7, type: 2}
+  - {fileID: 1274880130789712, guid: 2eac4cc2ba56a46ac95faf4e9c8f3edf, type: 2}
+  - {fileID: 1876294234382852, guid: 9dbe443dd77764f09937b7863159a8c5, type: 2}
+  - {fileID: 1303887882875676, guid: 64d8939e9ff9c4ff0bca71610ad49f06, type: 2}
+  - {fileID: 1281716148688200, guid: 70ed1f6d0987046a68920110d9a37881, type: 2}
+  - {fileID: 1375289456302220, guid: 73b4029b6f709490db347284a62f863a, type: 2}
+  - {fileID: 1379046129318656, guid: 2f84b840a6c12448990ca8f3dc846761, type: 2}
+  - {fileID: 1559764819630056, guid: f8ea02150ab434e6f8ac32131bfd01ca, type: 2}
+  - {fileID: 1026551249250230, guid: 481d53f7fe157419db450774b214a37b, type: 2}
+  - {fileID: 1063888181039074, guid: 3d483bfbaa3474c6a9c413b3ca466afe, type: 2}
+  - {fileID: 1181873765678052, guid: cbc810b0f3af045f49bb7ad99d2f2721, type: 2}
+  - {fileID: 1470816959362622, guid: 5092f3dc1a21f491c90560219bf9e025, type: 2}
+  - {fileID: 1839852101903546, guid: ed7fc6b7ebe0b40a1875c488a326c134, type: 2}
+  - {fileID: 1693374709386830, guid: ffea6c908844e43d9bde18e1caff910e, type: 2}
+  - {fileID: 1723831083082502, guid: ea61dfd5ef1f74e37ba8ea2c2ed5c962, type: 2}
+  - {fileID: 1955597938828254, guid: 77379529c49904de4bcb02ccc9629e8d, type: 2}
+  - {fileID: 1832675118707780, guid: 35d107e7a17864d1faef7dc1def4aa02, type: 2}
+  - {fileID: 1595206213786580, guid: 6699de576d6f54e2e9861dfbed1410e1, type: 2}
+  - {fileID: 1182795783995254, guid: 3435c404528564b0795207f892999a9c, type: 2}
+  - {fileID: 1804239948058598, guid: 71820309234b7446daf5233da6f7c2c9, type: 2}
+  pieces:
+  - {fileID: 1325088665959716, guid: 196ab8b1bf3a545f5b7ab5bee39a4e59, type: 2}
+  - {fileID: 1182083726496512, guid: ed06afff0ad2742f58356efaf688ed15, type: 2}
+  - {fileID: 1238512272435926, guid: 8d948156ff10547f1bc695b1641e88a5, type: 2}
+  - {fileID: 1441924279372916, guid: cdae68168b374442bbe69c4eee1c6d05, type: 2}
+  - {fileID: 1598021631286764, guid: 1a51e8433a6734969b69e63252a28d99, type: 2}
+  - {fileID: 1281716148688200, guid: 70ed1f6d0987046a68920110d9a37881, type: 2}
+  - {fileID: 1891847819839786, guid: efe54e3796ba949968ef28c26bc74b1e, type: 2}
+  - {fileID: 1096623037946284, guid: 28dd465407f0146eebd0ad0026f88682, type: 2}
+  - {fileID: 1027085037282984, guid: 00f8f182cf1a84d878e281cb597e6fa9, type: 2}
+  - {fileID: 1586818981657134, guid: b5bf3d468e27c439fba07ab489b8a5c1, type: 2}
+  - {fileID: 1063888181039074, guid: 3d483bfbaa3474c6a9c413b3ca466afe, type: 2}
+  - {fileID: 1532385709241800, guid: 8e03449174b954b45bb0fbeeca0a233f, type: 2}
+  - {fileID: 1828364778880452, guid: 390050bdcca8d404b9e8096e26dc22e4, type: 2}
+  - {fileID: 1310973591407750, guid: 9a3466113ce744338818ab9851046566, type: 2}
+  - {fileID: 1371329458353436, guid: 9f66fdeab6eee4573b4ec062e8a04810, type: 2}
+  - {fileID: 1723831083082502, guid: ea61dfd5ef1f74e37ba8ea2c2ed5c962, type: 2}
+  - {fileID: 1955597938828254, guid: 77379529c49904de4bcb02ccc9629e8d, type: 2}
+  - {fileID: 1350767420143362, guid: b08a31d7ceb0344ceb135968a15fce23, type: 2}
+  - {fileID: 1568476954905576, guid: 2c1f234c32f41484186dc17594eefd99, type: 2}
+  - {fileID: 1490565521689090, guid: fe5292639d24d42bebed85a8cd4e243e, type: 2}
+  - {fileID: 1404322867975938, guid: 930ab9df14e4e4c4a99e9958c8b6118e, type: 2}
+--- !u!114 &114657230099148152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1607842778142862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17b0b2fbb78acc46918af2601b6b6bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foods: {fileID: 4394882628328660}
+  pieces: {fileID: 4733249754505178}
+  prepareCount: 3
+  launchInterval: 1
+  moveSpeed: 10
+  rotateSpeed: 180
+  trajectoryLength: 64
+  potHeight: 0
