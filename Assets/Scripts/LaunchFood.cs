@@ -10,20 +10,28 @@ public class LaunchFood : MonoBehaviour {
     };
     private Status status = Status.FREE;
 
+    public Transform foods;
+    public Transform pieces;
+
     public int prepareCount = 3;
     public float launchInterval = 1f;
     private float bufferTime;
     private int second;
 
     private GameObject[] foodPool;
+    private GameObject[] piecePool;
+    private Vector3[] pieceVelocity;
+    private Vector3 geo = new Vector3(0, -9.8f, 0);
     private int poolCap = 5;
+    private int pieceEach = 3;
 
     public float moveSpeed = 10;
     public float rotateSpeed = 180;
     public float trajectoryLength = 64;
+    public float potHeight = 0;
 
     // Use this for initialization
-	void Start () {
+    void Start () {
         if (prepareCount <= 0) prepareCount = 3;
         if (launchInterval <= 0) launchInterval = 0.5f;
         foodPool = new GameObject[FoodSet.foods.Length * poolCap];
@@ -31,11 +39,21 @@ public class LaunchFood : MonoBehaviour {
             for (int j = 0; j < poolCap; j++)
             {
                 int k = i * poolCap + j;
-                foodPool[k] = Instantiate(FoodSet.foods[i].obj, transform);
+                foodPool[k] = Instantiate(FoodSet.foods[i].obj, foods);
                 foodPool[k].SetActive(false);
                 foodPool[k].transform.localScale = new Vector3(5, 5, 5);
             }
-	}
+        piecePool = new GameObject[FoodSet.foods.Length * pieceEach];
+        pieceVelocity = new Vector3[FoodSet.foods.Length * pieceEach];
+        for (int i = 0; i < FoodSet.foods.Length; i++)
+            for (int j = 0; j < pieceEach; j++)
+            {
+                int k = i * pieceEach + j;
+                piecePool[k] = Instantiate(FoodSet.foods[i].piece, pieces);
+                piecePool[k].SetActive(false);
+                piecePool[k].transform.localScale = new Vector3(3, 3, 3);
+            }
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -87,6 +105,31 @@ public class LaunchFood : MonoBehaviour {
                                 // some punish
                             }
                         }
+                    for (int i = 0; i < piecePool.Length; i++)
+                        if (piecePool[i].activeSelf)
+                        {
+                            GameObject piece = piecePool[i];
+                            piece.transform.position += pieceVelocity[i] * Time.deltaTime;
+                            piece.transform.Rotate(new Vector3(15, 30, 45) * Time.deltaTime);
+                            pieceVelocity[i] += geo * Time.deltaTime;
+                            if (piece.transform.position.y < potHeight)
+                                piece.SetActive(false);
+                        }
+
+                    // test
+                    if (Input.GetKeyDown(KeyCode.C))
+                    {
+                        float front = 45;
+                        int index = -1;
+                        for (int i = 0; i < foodPool.Length; i++)
+                            if (foodPool[i].activeSelf)
+                                if (foodPool[i].transform.position.z > front)
+                                {
+                                    front = foodPool[i].transform.position.z;
+                                    index = i;
+                                }
+                        if (index != -1) cutFood(foodPool[index]);
+                    }
                 }
                 break;
             case Status.END:
@@ -124,6 +167,26 @@ public class LaunchFood : MonoBehaviour {
             {
                 chosen = FoodSet.manuals[manualIndex];
                 status = Status.PREPARE;
+            }
+    }
+
+    public void cutFood(GameObject food)
+    {
+        for (int i = 0; i < foodPool.Length; i++)
+            if (foodPool[i] == food)
+            {
+                food.SetActive(false);
+
+                // show piece
+                Vector3 pos = food.transform.position;
+                int index = i / poolCap;
+                for (int j = 0; j < pieceEach; j++)
+                {
+                    piecePool[index * pieceEach + j].transform.position = new Vector3(pos.x, pos.y, pos.z);
+                    pieceVelocity[index * pieceEach + j] = new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), 0);
+                    piecePool[index * pieceEach + j].SetActive(true);
+                }
+                break;
             }
     }
 }

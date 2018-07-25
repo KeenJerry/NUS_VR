@@ -9,6 +9,7 @@ public class FoodSet : MonoBehaviour {
         public int key;
         public string name;
         public GameObject obj;
+        public GameObject piece;
     }
 
     public class Manual
@@ -23,17 +24,17 @@ public class FoodSet : MonoBehaviour {
     static public Manual[] manuals;
 
     public GameObject[] objs;
+    public GameObject[] pieces;
 
     void Awake() 
     {
         foods = loadFood(Application.dataPath + "/Data/foods.json");
         manuals = loadManual(Application.dataPath + "/Data/manuals.json");
-    }
-
-    // Use this for initialization
-    void Start () {
         for (int i = 0; i < objs.Length; i++)
+        {
             foods[i].obj = objs[i];
+            foods[i].piece = pieces[i];
+        }
     }
 	
 	// Update is called once per frame
@@ -54,6 +55,8 @@ public class FoodSet : MonoBehaviour {
             result[i] = new Food();
             result[i].name = rawData[i].name;
             result[i].key = rawData[i].key;
+            result[i].obj = null;
+            result[i].piece = null;
         }
 
         return result;
