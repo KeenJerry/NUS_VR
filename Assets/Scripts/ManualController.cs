@@ -30,7 +30,7 @@ public class ManualController : MonoBehaviour {
         if (switchInterval <= 0) switchInterval = 0.5f;
         bufferTime = switchInterval - 0.05f;
         manuals = FoodSet.manuals;
-        camera = GameObject.Find("Camera").transform;
+        camera = GameObject.Find("VRCamera").transform;
     }
 	
 	// Update is called once per frame
