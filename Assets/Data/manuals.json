@@ -1,0 +1,258 @@
+{"manuals": [
+	{
+		"name": "Scrambled Tomatoes & Eggs",
+		"foods": [
+			{
+				"key": 20,
+				"num": 3
+			},
+			{
+				"key": 8,
+				"num": 4
+			}
+		],
+		"key": 0
+	},
+	{
+		"name": "Sirloin steak",
+		"foods": [
+			{
+				"key": 19,
+				"num": 1
+			},
+			{
+				"key": 20,
+				"num": 1
+			},
+			{
+				"key": 11,
+				"num": 1
+			},
+			{
+				"key": 2,
+				"num": 1
+			}
+		],
+		"key": 1
+	},
+	{
+		"name": "Kung Pao Chicken",
+		"foods": [
+			{
+				"key": 6,
+				"num": 3
+			},
+			{
+				"key": 14,
+				"num": 2
+			},
+			{
+				"key": 7,
+				"num": 2
+			}
+		],
+		"key": 2
+	},
+	{
+		"name": "Sunshine Breakfast",
+		"foods": [
+			{
+				"key": 18,
+				"num": 2
+			},
+			{
+				"key": 8,
+				"num": 2
+			},
+			{
+				"key": 2,
+				"num": 1
+			},
+			{
+				"key": 3,
+				"num": 1
+			}
+		],
+		"key": 3
+	},
+	{
+		"name": "King Pizza",
+		"foods": [
+			{
+				"key": 3,
+				"num": 2
+			},
+			{
+				"key": 6,
+				"num": 1
+			},
+			{
+				"key": 18,
+				"num": 2
+			},
+			{
+				"key": 14,
+				"num": 2
+			}
+		],
+		"key": 4
+	},
+	{
+		"name": "Tomato&Beef Stew",
+		"foods": [
+			{
+				"key": 19,
+				"num": 2
+			},
+			{
+				"key": 17,
+				"num": 2
+			},
+			{
+				"key": 20,
+				"num": 2
+			}
+		],
+		"key": 5
+	},
+	{
+		"name": "Hawaiian Fruits Salad",
+		"foods": [
+			{
+				"key": 0,
+				"num": 2
+			},
+			{
+				"key": 1,
+				"num": 2
+			},
+			{
+				"key": 13,
+				"num": 2
+			},
+			{
+				"key": 16,
+				"num": 1
+			},
+			{
+				"key": 12,
+				"num": 1
+			}
+		],
+		"key": 6
+	},
+	{
+		"name": "Caesar Salad",
+		"foods": [
+			{
+				"key": 6,
+				"num": 1
+			},
+			{
+				"key": 20,
+				"num": 2
+			},
+			{
+				"key": 5,
+				"num": 2
+			},
+			{
+				"key": 4,
+				"num": 2
+			},
+			{
+				"key": 7,
+				"num": 2
+			}
+		],
+		"key": 7
+	},
+	{
+		"name": "Spicy Fried Chicken",
+		"foods": [
+			{
+				"key": 6,
+				"num": 2
+			},
+			{
+				"key": 8,
+				"num": 2
+			},
+			{
+				"key": 20,
+				"num": 2
+			}
+		],
+		"key": 8
+	},
+	{
+		"name": "Fish-flavored Chicken",
+		"foods": [
+			{
+				"key": 6,
+				"num": 2
+			},
+			{
+				"key": 14,
+				"num": 2
+			},
+			{
+				"key": 17,
+				"num": 2
+			},
+			{
+				"key": 4,
+				"num": 2
+			},
+			{
+				"key": 9,
+				"num": 2
+			}
+		],
+		"key": 9
+	},
+	{
+		"name": "Burrito",
+		"foods": [
+			{
+				"key": 19,
+				"num": 1
+			},
+			{
+				"key": 6,
+				"num": 1
+			},
+			{
+				"key": 17,
+				"num": 2
+			},
+			{
+				"key": 7,
+				"num": 2
+			}
+		],
+		"key": 10
+	},
+	{
+		"name": "Vitamin Juice",
+		"foods": [
+			{
+				"key": 0,
+				"num": 2
+			},
+			{
+				"key": 15,
+				"num": 2
+			},
+			{
+				"key": 10,
+				"num": 1
+			},
+			{
+				"key": 11,
+				"num": 2
+			}
+		],
+		"key": 11
+	}
+]}

@@ -1,0 +1,86 @@
+{"foods": [
+	{
+		"name": "Apple",
+		"key": 0
+	},
+	{
+		"name": "Banana",
+		"key": 1
+	},
+	{
+		"name": "Bread",
+		"key": 2
+	},
+	{
+		"name": "Cheese",
+		"key": 3
+	},
+	{
+		"name": "Carrot",
+		"key": 4
+	},
+	{
+		"name": "Cherry",
+		"key": 5
+	},
+	{
+		"name": "Chicken",
+		"key": 6
+	},
+	{
+		"name": "Cucumber",
+		"key": 7
+	},
+	{
+		"name": "Egg",
+		"key": 8
+	},
+	{
+		"name": "Eggplant",
+		"key": 9
+	},
+	{
+		"name": "Grapes",
+		"key": 10
+	},
+	{
+		"name": "Lemon",
+		"key": 11
+	},
+	{
+		"name": "Melon",
+		"key": 12
+	},
+	{
+		"name": "Orange",
+		"key": 13
+	},
+	{
+		"name": "Paprika",
+		"key": 14
+	},
+	{
+		"name": "Pear",
+		"key": 15
+	},
+	{
+		"name": "Pineapple",
+		"key": 16
+	},
+	{
+		"name": "Potato",
+		"key": 17
+	},
+	{
+		"name": "Sausage",
+		"key": 18
+	},
+	{
+		"name": "Steak",
+		"key": 19
+	},
+	{
+		"name": "Tomato",
+		"key": 20
+	}
+]}
