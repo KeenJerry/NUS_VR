@@ -37,10 +37,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4352577416799002}
   - component: {fileID: 114148437806314158}
+  - component: {fileID: 114737552365439958}
   - component: {fileID: 114104394509085466}
   - component: {fileID: 114751133807352080}
   - component: {fileID: 114935994903256408}
-  - component: {fileID: 114737552365439958}
+  - component: {fileID: 65633813318612226}
+  - component: {fileID: 54920046982758424}
   m_Layer: 0
   m_Name: Knife_B_PreTransform
   m_TagString: Untagged
@@ -116,6 +118,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1033824743598966}
   m_Mesh: {fileID: 4300000, guid: 8a4ca9b523b2549feadc0e291e5f2b1b, type: 3}
+--- !u!54 &54920046982758424
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1786127977677216}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &65633813318612226
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1786127977677216}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114104394509085466
 MonoBehaviour:
   m_ObjectHideFlags: 1
