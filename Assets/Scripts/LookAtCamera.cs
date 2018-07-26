@@ -7,7 +7,7 @@ public class LookAtCamera : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        camera = GameObject.Find("Camera");
+        camera = GameObject.Find("VRCamera");
     }
 	
 	// Update is called once per frame

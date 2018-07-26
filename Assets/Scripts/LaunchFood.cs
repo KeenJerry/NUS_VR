@@ -1,9 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class LaunchFood : MonoBehaviour {
     private FoodSet.Manual chosen = null;
+    private int[] statisticsCount = null;
+    private int statisticsMissCount;
+    private int statisticsErrorCount;
     private enum Status
     {
         FREE, PREPARE, LAUNCH, PAUSE, END
@@ -12,6 +16,10 @@ public class LaunchFood : MonoBehaviour {
 
     public Transform foods;
     public Transform pieces;
+    public Transform statisticsFoods;
+    public Transform statisticsText;
+    public TextMesh statisticsMiss;
+    public TextMesh statisticsError;
 
     public int prepareCount = 3;
     public float launchInterval = 1f;
@@ -25,6 +33,7 @@ public class LaunchFood : MonoBehaviour {
     private int poolCap = 5;
     private int pieceEach = 3;
 
+    public float statisticsHeight = 11;
     public float moveSpeed = 10;
     public float rotateSpeed = 180;
     public float trajectoryLength = 64;
@@ -135,6 +144,12 @@ public class LaunchFood : MonoBehaviour {
             case Status.END:
                 foreach (GameObject food in foodPool)
                     food.SetActive(false);
+                clearChildren(statisticsFoods);
+                clearChildren(statisticsText);
+                statisticsFoods.gameObject.SetActive(false);
+                statisticsText.gameObject.SetActive(false);
+                statisticsMiss.gameObject.SetActive(false);
+                statisticsError.gameObject.SetActive(false);
                 status = Status.FREE;
                 break;
             case Status.PAUSE:
@@ -147,6 +162,13 @@ public class LaunchFood : MonoBehaviour {
         }
 	}
 
+    private void clearChildren(Transform parent)
+    {
+        GameObject[] children = parent.gameObject.GetComponentsInChildren<GameObject>();
+        foreach (GameObject child in children)
+            Destroy(child);
+    }
+
     private void launchFood()
     {
         int[] freeFoodIndex = new int[foodPool.Length];
@@ -155,8 +177,8 @@ public class LaunchFood : MonoBehaviour {
             if (!foodPool[i].activeSelf)
                 freeFoodIndex[freeFoodCount++] = i;
 
-        int choice = freeFoodIndex[Random.Range(0, freeFoodCount)];
-        foodPool[choice].transform.localPosition = new Vector3(Random.Range(-3, 4), Random.Range(-3, 4), 0);
+        int choice = freeFoodIndex[UnityEngine.Random.Range(0, freeFoodCount)];
+        foodPool[choice].transform.localPosition = new Vector3(UnityEngine.Random.Range(-3, 4), UnityEngine.Random.Range(-3, 4), 0);
         foodPool[choice].SetActive(true);
     }
 
@@ -166,6 +188,39 @@ public class LaunchFood : MonoBehaviour {
             if (manualIndex >= 0 && manualIndex < FoodSet.manuals.Length)
             {
                 chosen = FoodSet.manuals[manualIndex];
+
+                // create statistics
+                int count = chosen.foods.Length;
+                statisticsCount = new int[count];
+                for (int i = 0; i < count; i++)
+                {
+                    statisticsCount[i] = 0;
+                    Vector3 offset = new Vector3(0, -statisticsHeight / 2 + (i + 1) * statisticsHeight / (count + 1), 0);
+                    GameObject tempFood;
+                    tempFood = Instantiate(chosen.foods[i].obj, statisticsFoods);
+                    tempFood.transform.localPosition = offset;
+                    tempFood.transform.localScale = new Vector3(7, 7, 7);
+                    GameObject tempText;
+                    tempText = new GameObject();
+                    tempText.transform.parent = statisticsText;
+                    tempText.transform.localPosition = offset;
+                    tempText.AddComponent<TextMesh>();
+                    tempText.GetComponent<TextMesh>().text = 0 + "/" + chosen.nums[i];
+                    tempText.GetComponent<TextMesh>().anchor = TextAnchor.LowerLeft;
+                    tempText.GetComponent<TextMesh>().characterSize = 0.2f;
+                    tempText.GetComponent<TextMesh>().fontSize = 60;
+                }
+
+                statisticsMissCount = 0;
+                statisticsErrorCount = 0;
+                statisticsMiss.text = "Miss: 0";
+                statisticsError.text = "Error: 0";
+
+                statisticsFoods.gameObject.SetActive(true);
+                statisticsText.gameObject.SetActive(true);
+                statisticsMiss.gameObject.SetActive(true);
+                statisticsError.gameObject.SetActive(true);
+
                 status = Status.PREPARE;
             }
     }
@@ -183,7 +238,7 @@ public class LaunchFood : MonoBehaviour {
                 for (int j = 0; j < pieceEach; j++)
                 {
                     piecePool[index * pieceEach + j].transform.position = new Vector3(pos.x, pos.y, pos.z);
-                    pieceVelocity[index * pieceEach + j] = new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), 0);
+                    pieceVelocity[index * pieceEach + j] = new Vector3(UnityEngine.Random.Range(-1, 1), UnityEngine.Random.Range(-1, 1), 0);
                     piecePool[index * pieceEach + j].SetActive(true);
                 }
                 break;
