@@ -6,6 +6,7 @@ using UnityEngine;
 public class LaunchFood : MonoBehaviour {
     private FoodSet.Manual chosen = null;
     private int[] statisticsCount = null;
+    private TextMesh[] statisticsCountText = null;
     private int statisticsMissCount;
     private int statisticsErrorCount;
     private enum Status
@@ -114,7 +115,11 @@ public class LaunchFood : MonoBehaviour {
                             {
                                 food.SetActive(false);
                                 // some punish
-                                if (inManual(i / poolCap) != -1) statisticsMissCount++;
+                                if (inManual(i / poolCap) != -1)
+                                {
+                                    statisticsMissCount++;
+                                    statisticsMiss.text = "Miss: " + statisticsMissCount;
+                                }
                             }
                         }
                     }
@@ -196,6 +201,7 @@ public class LaunchFood : MonoBehaviour {
                 // create statistics
                 int count = chosen.foods.Length;
                 statisticsCount = new int[count];
+                statisticsCountText = new TextMesh[count];
                 for (int i = 0; i < count; i++)
                 {
                     statisticsCount[i] = 0;
@@ -203,16 +209,18 @@ public class LaunchFood : MonoBehaviour {
                     GameObject tempFood;
                     tempFood = Instantiate(chosen.foods[i].obj, statisticsFoods);
                     tempFood.transform.localPosition = offset;
-                    tempFood.transform.localScale = new Vector3(7, 7, 7);
+                    tempFood.transform.localScale = new Vector3(3, 3, 3);
                     GameObject tempText;
                     tempText = new GameObject();
                     tempText.transform.parent = statisticsText;
                     tempText.transform.localPosition = offset;
+                    tempText.transform.localEulerAngles = new Vector3(0, 0, 0);
                     tempText.AddComponent<TextMesh>();
-                    tempText.GetComponent<TextMesh>().text = 0 + "/" + chosen.nums[i];
-                    tempText.GetComponent<TextMesh>().anchor = TextAnchor.LowerLeft;
-                    tempText.GetComponent<TextMesh>().characterSize = 0.2f;
-                    tempText.GetComponent<TextMesh>().fontSize = 60;
+                    statisticsCountText[i] = tempText.GetComponent<TextMesh>();
+                    statisticsCountText[i].text = 0 + "/" + chosen.nums[i];
+                    statisticsCountText[i].anchor = TextAnchor.LowerLeft;
+                    statisticsCountText[i].characterSize = 0.2f;
+                    statisticsCountText[i].fontSize = 60;
                 }
 
                 statisticsMissCount = 0;
@@ -248,8 +256,16 @@ public class LaunchFood : MonoBehaviour {
 
                 // statistics
                 int indexInManual = inManual(index);
-                if (indexInManual == -1) statisticsErrorCount++;
-                else statisticsCount[indexInManual]++;
+                if (indexInManual == -1)
+                {
+                    statisticsErrorCount++;
+                    statisticsError.text = "Error: " + statisticsErrorCount;
+                }
+                else
+                {
+                    statisticsCount[indexInManual]++;
+                    statisticsCountText[indexInManual].text = statisticsCount[indexInManual] + "/" + chosen.nums[indexInManual];
+                }
 
                 break;
             }
