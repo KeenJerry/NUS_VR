@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33439331964304768}
   - component: {fileID: 23002118125288834}
   - component: {fileID: 95331902957945758}
+  - component: {fileID: 65442785778430032}
   m_Layer: 0
   m_Name: cheese_wheel_yellow
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1876294234382852}
   m_Mesh: {fileID: 4300000, guid: 6a271b33ecf744cfaae17ad86bd6da74, type: 3}
+--- !u!65 &65442785778430032
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1876294234382852}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.33930376, y: 0.17682226, z: 0.33930376}
+  m_Center: {x: 0, y: 0.08841113, z: 0}
 --- !u!95 &95331902957945758
 Animator:
   serializedVersion: 3

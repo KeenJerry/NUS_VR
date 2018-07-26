@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33334168326669034}
   - component: {fileID: 23622142595628296}
   - component: {fileID: 95642593083523346}
+  - component: {fileID: 65843403641456690}
   m_Layer: 0
   m_Name: table_large_cloth
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1756842807911698}
   m_Mesh: {fileID: 4300000, guid: 37166d3f3cf084242bca7e93b4eb587d, type: 3}
+--- !u!65 &65843403641456690
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1756842807911698}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.5790691, y: 0.65470076, z: 1.6820507}
+  m_Center: {x: 0.00000035762787, y: 0.3333016, z: 0}
 --- !u!95 &95642593083523346
 Animator:
   serializedVersion: 3

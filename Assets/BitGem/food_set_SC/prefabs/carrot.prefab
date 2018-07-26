@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33276252484671352}
   - component: {fileID: 23892967321433340}
   - component: {fileID: 95087113974835198}
+  - component: {fileID: 65274472284830110}
   m_Layer: 0
   m_Name: carrot
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1303887882875676}
   m_Mesh: {fileID: 4300000, guid: be12b4222c2d647279b87a9c18fc1bf6, type: 3}
+--- !u!65 &65274472284830110
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1303887882875676}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6636291, y: 0.15446624, z: 0.15394929}
+  m_Center: {x: 0, y: 0.077233136, z: 0}
 --- !u!95 &95087113974835198
 Animator:
   serializedVersion: 3

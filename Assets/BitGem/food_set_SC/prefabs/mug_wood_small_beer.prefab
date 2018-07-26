@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33642075332648894}
   - component: {fileID: 23747229210446836}
   - component: {fileID: 95335754212566496}
+  - component: {fileID: 65245075762769100}
   m_Layer: 0
   m_Name: mug_wood_small_beer
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1668250034579394}
   m_Mesh: {fileID: 4300000, guid: f4f42eb5f1b8545e985ef94054621b39, type: 3}
+--- !u!65 &65245075762769100
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1668250034579394}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.32459006, y: 0.26917532, z: 0.24852875}
+  m_Center: {x: -0.03803068, y: 0.13458766, z: 0.000000018626451}
 --- !u!95 &95335754212566496
 Animator:
   serializedVersion: 3

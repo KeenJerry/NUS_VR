@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33639432242639694}
   - component: {fileID: 23260492487932238}
   - component: {fileID: 95309611500610728}
+  - component: {fileID: 65703971072279708}
   m_Layer: 0
   m_Name: plate_drumstick
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1343369467346372}
   m_Mesh: {fileID: 4300000, guid: 9af6a7f7b35d94e7ea6be1841f35f766, type: 3}
+--- !u!65 &65703971072279708
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1343369467346372}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6789404, y: 0.25743142, z: 0.5170959}
+  m_Center: {x: -0.06845397, y: 0.12871571, z: 0}
 --- !u!95 &95309611500610728
 Animator:
   serializedVersion: 3

@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33757013803504810}
   - component: {fileID: 23407803754877546}
   - component: {fileID: 95896404084292860}
+  - component: {fileID: 65815309113551284}
   m_Layer: 0
   m_Name: tomato_cherry
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1821361539367640}
   m_Mesh: {fileID: 4300000, guid: 1e88161ec15024bae8f5fe1afc56d5ea, type: 3}
+--- !u!65 &65815309113551284
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1821361539367640}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.060829945, y: 0.070547484, z: 0.060829945}
+  m_Center: {x: 0, y: 0.035273742, z: 0}
 --- !u!95 &95896404084292860
 Animator:
   serializedVersion: 3

@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33632621794843568}
   - component: {fileID: 23733646887310680}
   - component: {fileID: 95790680826471566}
+  - component: {fileID: 65779424745130448}
   m_Layer: 0
   m_Name: candle_half
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1247438964710304}
   m_Mesh: {fileID: 4300000, guid: 9ec238e3220594a2fb67152d7625bf45, type: 3}
+--- !u!65 &65779424745130448
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1247438964710304}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1834539, y: 0.40418306, z: 0.18345395}
+  m_Center: {x: 0, y: 0.20209153, z: -0.000000018626451}
 --- !u!95 &95790680826471566
 Animator:
   serializedVersion: 3

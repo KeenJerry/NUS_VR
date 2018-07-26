@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33146285762090580}
   - component: {fileID: 23339337309186612}
   - component: {fileID: 95639476594135090}
+  - component: {fileID: 65707164122012656}
   m_Layer: 0
   m_Name: melon_slice
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1828364778880452}
   m_Mesh: {fileID: 4300000, guid: d355be33781ef4a9a94187061a5e5218, type: 3}
+--- !u!65 &65707164122012656
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1828364778880452}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.44852653, y: 0.18444404, z: 0.17082477}
+  m_Center: {x: 0, y: 0.09222202, z: 0}
 --- !u!95 &95639476594135090
 Animator:
   serializedVersion: 3

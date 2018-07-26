@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33183666917597006}
   - component: {fileID: 23623456301362340}
   - component: {fileID: 95465205926223250}
+  - component: {fileID: 65467259216128466}
   m_Layer: 0
   m_Name: kask_tap_stand
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1316221627557492}
   m_Mesh: {fileID: 4300000, guid: 621c6c04dfa1e44c6bc7b0d4cc65c87d, type: 3}
+--- !u!65 &65467259216128466
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1316221627557492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9103342, y: 1.14937, z: 1.2413648}
+  m_Center: {x: -0.003101334, y: 0.5455245, z: 0.15233882}
 --- !u!95 &95465205926223250
 Animator:
   serializedVersion: 3

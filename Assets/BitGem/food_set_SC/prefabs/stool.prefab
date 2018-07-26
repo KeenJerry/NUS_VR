@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33983453088017332}
   - component: {fileID: 23707570776433940}
   - component: {fileID: 95570380201275972}
+  - component: {fileID: 65847763560063234}
   m_Layer: 0
   m_Name: stool
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1005870434740814}
   m_Mesh: {fileID: 4300000, guid: e773720d2b96e432da9755fc1ace3e3d, type: 3}
+--- !u!65 &65847763560063234
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1005870434740814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40629324, y: 0.34579128, z: 0.40629324}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95570380201275972
 Animator:
   serializedVersion: 3

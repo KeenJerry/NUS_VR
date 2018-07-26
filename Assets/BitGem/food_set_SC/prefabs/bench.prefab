@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33561164634244418}
   - component: {fileID: 23750778307237544}
   - component: {fileID: 95628374184137058}
+  - component: {fileID: 65743593616100368}
   m_Layer: 0
   m_Name: bench
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1511899570510550}
   m_Mesh: {fileID: 4300000, guid: 0dc3483c410bb45d5be3b41c57a538b1, type: 3}
+--- !u!65 &65743593616100368
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1511899570510550}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.34579128, z: 0.40629324}
+  m_Center: {x: 0, y: 0.17289564, z: 0}
 --- !u!95 &95628374184137058
 Animator:
   serializedVersion: 3

@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33106876708888044}
   - component: {fileID: 23866547939422300}
   - component: {fileID: 95448759088266396}
+  - component: {fileID: 65849306101334520}
   m_Layer: 0
   m_Name: sauce_plate
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1174946045313752}
   m_Mesh: {fileID: 4300000, guid: 553a2f8c571b4459c9082653e34821f0, type: 3}
+--- !u!65 &65849306101334520
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1174946045313752}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.24530151, y: 0.020068053, z: 0.24530174}
+  m_Center: {x: 0, y: 0.050063297, z: 0}
 --- !u!95 &95448759088266396
 Animator:
   serializedVersion: 3

@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33394502825476966}
   - component: {fileID: 23960511985101706}
   - component: {fileID: 95557491973411030}
+  - component: {fileID: 65971666141492616}
   m_Layer: 0
   m_Name: eggplant_slice
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1586818981657134}
   m_Mesh: {fileID: 4300000, guid: cfe793fd182c94a4cacb7ea825c54b27, type: 3}
+--- !u!65 &65971666141492616
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1586818981657134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.18887444, y: 0.037297595, z: 0.18887444}
+  m_Center: {x: 0, y: 0.016440326, z: 0}
 --- !u!95 &95557491973411030
 Animator:
   serializedVersion: 3

@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33842823371673616}
   - component: {fileID: 23530068699897826}
   - component: {fileID: 95763540694274928}
+  - component: {fileID: 65797321452859630}
   m_Layer: 0
   m_Name: knife_lying_flat
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1062064390485922}
   m_Mesh: {fileID: 4300000, guid: 7fbd740752b604147be9492f3e8759f0, type: 3}
+--- !u!65 &65797321452859630
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1062064390485922}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4050991, y: 0.028266953, z: 0.09251188}
+  m_Center: {x: 0.11655634, y: 0.0007426562, z: -0.0119757}
 --- !u!95 &95763540694274928
 Animator:
   serializedVersion: 3

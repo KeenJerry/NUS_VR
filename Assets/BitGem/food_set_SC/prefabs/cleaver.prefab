@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33252213318707646}
   - component: {fileID: 23507786487754692}
   - component: {fileID: 95378337558550716}
+  - component: {fileID: 65722492760299540}
   m_Layer: 0
   m_Name: cleaver
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1125505371065792}
   m_Mesh: {fileID: 4300000, guid: 8a4ca9b523b2549feadc0e291e5f2b1b, type: 3}
+--- !u!65 &65722492760299540
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1125505371065792}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5498023, y: 0.24047598, z: 0.07241014}
+  m_Center: {x: -0.09408158, y: 0.12001866, z: -0.0009380393}
 --- !u!95 &95378337558550716
 Animator:
   serializedVersion: 3

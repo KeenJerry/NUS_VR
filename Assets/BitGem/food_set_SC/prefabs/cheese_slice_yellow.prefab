@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33257272606226930}
   - component: {fileID: 23475154017562478}
   - component: {fileID: 95874952263386100}
+  - component: {fileID: 65875664600089726}
   m_Layer: 0
   m_Name: cheese_slice_yellow
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1441924279372916}
   m_Mesh: {fileID: 4300000, guid: 1637f568e7af24c45a43e1bc8f67c177, type: 3}
+--- !u!65 &65875664600089726
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1441924279372916}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.16965187, y: 0.17682227, z: 0.16965188}
+  m_Center: {x: -0.08482593, y: 0.08841114, z: 0.08467593}
 --- !u!95 &95874952263386100
 Animator:
   serializedVersion: 3

@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33256417646757340}
   - component: {fileID: 23628826657457892}
   - component: {fileID: 95754025898693904}
+  - component: {fileID: 65610914338334052}
   m_Layer: 0
   m_Name: stone_ring
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1842291383208632}
   m_Mesh: {fileID: 4300000, guid: 351eb127213e941a8b53188dd8e0b4bc, type: 3}
+--- !u!65 &65610914338334052
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1842291383208632}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0155946, y: 0.17230816, z: 1.0155946}
+  m_Center: {x: 0, y: 0.08615408, z: 0}
 --- !u!95 &95754025898693904
 Animator:
   serializedVersion: 3

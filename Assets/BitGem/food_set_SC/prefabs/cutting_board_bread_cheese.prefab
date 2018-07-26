@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33162477416313158}
   - component: {fileID: 23467390202031060}
   - component: {fileID: 95604854662844082}
+  - component: {fileID: 65846472611158398}
   m_Layer: 0
   m_Name: cutting_board_bread_cheese
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1315462725366750}
   m_Mesh: {fileID: 4300000, guid: a102d751e42fb40a68e7f552ced76fda, type: 3}
+--- !u!65 &65846472611158398
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1315462725366750}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.81076324, y: 0.2194766, z: 0.58949995}
+  m_Center: {x: 0.0124349445, y: 0.1097383, z: 0.023848593}
 --- !u!95 &95604854662844082
 Animator:
   serializedVersion: 3

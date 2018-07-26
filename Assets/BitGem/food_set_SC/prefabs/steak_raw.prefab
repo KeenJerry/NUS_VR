@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33997624936165560}
   - component: {fileID: 23527481189978838}
   - component: {fileID: 95632633059167904}
+  - component: {fileID: 65565440225304940}
   m_Layer: 0
   m_Name: steak_raw
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1182795783995254}
   m_Mesh: {fileID: 4300000, guid: 17c6a3fb622694cd0a039ca91c2ba4e3, type: 3}
+--- !u!65 &65565440225304940
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1182795783995254}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5616628, y: 0.09529874, z: 0.4444341}
+  m_Center: {x: 0, y: 0.041196026, z: 0}
 --- !u!95 &95632633059167904
 Animator:
   serializedVersion: 3

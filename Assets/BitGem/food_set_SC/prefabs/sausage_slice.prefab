@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33927529177100366}
   - component: {fileID: 23888927847692802}
   - component: {fileID: 95885510363893786}
+  - component: {fileID: 65881610673168374}
   m_Layer: 0
   m_Name: sausage_slice
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1568476954905576}
   m_Mesh: {fileID: 4300000, guid: 169450a6a52df45fb9b050787f4d3936, type: 3}
+--- !u!65 &65881610673168374
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1568476954905576}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.14379199, y: 0.038705688, z: 0.14848481}
+  m_Center: {x: -0.071895994, y: 0.017042147, z: 0}
 --- !u!95 &95885510363893786
 Animator:
   serializedVersion: 3

@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33033402561667168}
   - component: {fileID: 23719243598238410}
   - component: {fileID: 95339350347819432}
+  - component: {fileID: 65050326222106634}
   m_Layer: 0
   m_Name: chair_cushion
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1302054942620920}
   m_Mesh: {fileID: 4300000, guid: e4e1308fb409b4d0ea22fa0182c45a84, type: 3}
+--- !u!65 &65050326222106634
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1302054942620920}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6999806, y: 1.251574, z: 0.6174294}
+  m_Center: {x: 0, y: 0.625787, z: -0.000000029802322}
 --- !u!95 &95339350347819432
 Animator:
   serializedVersion: 3

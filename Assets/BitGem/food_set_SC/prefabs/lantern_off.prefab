@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33291246745641898}
   - component: {fileID: 23635567715080498}
   - component: {fileID: 95789014782901450}
+  - component: {fileID: 65618231905758576}
   m_Layer: 0
   m_Name: lantern_off
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1584597500575754}
   m_Mesh: {fileID: 4300000, guid: c71d43763680d45a3a5728c2f29c5c61, type: 3}
+--- !u!65 &65618231905758576
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1584597500575754}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4105594, y: 0.63740605, z: 0.41055936}
+  m_Center: {x: 0, y: 0.31870303, z: 0.000000014901161}
 --- !u!95 &95789014782901450
 Animator:
   serializedVersion: 3

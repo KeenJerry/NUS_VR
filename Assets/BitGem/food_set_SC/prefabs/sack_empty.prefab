@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33065754022182808}
   - component: {fileID: 23622522699118604}
   - component: {fileID: 95514538365468458}
+  - component: {fileID: 65758066909172446}
   m_Layer: 0
   m_Name: sack_empty
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1668624611686822}
   m_Mesh: {fileID: 4300000, guid: 7e5bb138e4f894df6b7ae927b132157a, type: 3}
+--- !u!65 &65758066909172446
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1668624611686822}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6368774, y: 0.48885214, z: 0.73825824}
+  m_Center: {x: 0, y: 0.24667048, z: 0.050690427}
 --- !u!95 &95514538365468458
 Animator:
   serializedVersion: 3

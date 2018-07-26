@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33873331953761210}
   - component: {fileID: 23042898735672244}
   - component: {fileID: 95176970265578542}
+  - component: {fileID: 65274245452275246}
   m_Layer: 0
   m_Name: kask_tap
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1391234620258652}
   m_Mesh: {fileID: 4300000, guid: eab50a11f31f349e4874d83acece18c0, type: 3}
+--- !u!65 &65274245452275246
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1391234620258652}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9103342, y: 0.9086365, z: 1.2413648}
+  m_Center: {x: -0.003101334, y: 0.45431826, z: 0.15233882}
 --- !u!95 &95176970265578542
 Animator:
   serializedVersion: 3

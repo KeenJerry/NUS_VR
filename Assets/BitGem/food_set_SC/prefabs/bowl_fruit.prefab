@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33764223861580844}
   - component: {fileID: 23259518755367108}
   - component: {fileID: 95289197849433444}
+  - component: {fileID: 65734182483584126}
   m_Layer: 0
   m_Name: bowl_fruit
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1025828756711936}
   m_Mesh: {fileID: 4300000, guid: d7790e546a4844378aa5124edd8b2558, type: 3}
+--- !u!65 &65734182483584126
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1025828756711936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.823792, y: 0.52184176, z: 0.65549004}
+  m_Center: {x: 0.10356678, y: 0.26060265, z: -0.009125978}
 --- !u!95 &95289197849433444
 Animator:
   serializedVersion: 3

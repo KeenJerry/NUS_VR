@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33463897855038934}
   - component: {fileID: 23689598409658502}
   - component: {fileID: 95015618177421386}
+  - component: {fileID: 65883598641201094}
   m_Layer: 0
   m_Name: bottle_rum_basket
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1776715992138542}
   m_Mesh: {fileID: 4300000, guid: b9f3ba9bf2f3f46dc9d8536b9c7e6791, type: 3}
+--- !u!65 &65883598641201094
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1776715992138542}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.37631187, y: 0.64140725, z: 0.41639686}
+  m_Center: {x: -0.00415954, y: 0.32070363, z: 0.02460318}
 --- !u!95 &95015618177421386
 Animator:
   serializedVersion: 3

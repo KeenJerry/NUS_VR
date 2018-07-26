@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33435201902354046}
   - component: {fileID: 23583033018185458}
   - component: {fileID: 95934739772846440}
+  - component: {fileID: 65910411802963514}
   m_Layer: 0
   m_Name: tbone_steak_grilled
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1627474245270156}
   m_Mesh: {fileID: 4300000, guid: efc2b63098e1a4683a29a5fcacf9ab35, type: 3}
+--- !u!65 &65910411802963514
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1627474245270156}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.44773948, y: 0.097039185, z: 0.28498787}
+  m_Center: {x: 0.006721914, y: 0.047707718, z: -0.018965032}
 --- !u!95 &95934739772846440
 Animator:
   serializedVersion: 3

@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33154870229978560}
   - component: {fileID: 23624049835297738}
   - component: {fileID: 95185895638354430}
+  - component: {fileID: 65481771863300838}
   m_Layer: 0
   m_Name: bowl_ceramic
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1141943930135324}
   m_Mesh: {fileID: 4300000, guid: 4dba2b71a1bde4939ab3272f6d9b56ce, type: 3}
+--- !u!65 &65481771863300838
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1141943930135324}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.47463194, y: 0.16618, z: 0.47463167}
+  m_Center: {x: 0, y: 0.08309, z: 0.000000022351742}
 --- !u!95 &95185895638354430
 Animator:
   serializedVersion: 3

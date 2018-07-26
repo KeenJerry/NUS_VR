@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33825066851902154}
   - component: {fileID: 23056360809646536}
   - component: {fileID: 95867947357899502}
+  - component: {fileID: 65899566212251498}
   m_Layer: 0
   m_Name: table_small
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1176088844755730}
   m_Mesh: {fileID: 4300000, guid: 200721b64cd0849d3b7d770e815673a1, type: 3}
+--- !u!65 &65899566212251498
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1176088844755730}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.62226194, y: 0.6194624, z: 0.62226075}
+  m_Center: {x: 0, y: 0.3097312, z: 0}
 --- !u!95 &95867947357899502
 Animator:
   serializedVersion: 3

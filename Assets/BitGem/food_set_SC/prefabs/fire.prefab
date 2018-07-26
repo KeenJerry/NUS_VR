@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33797085556799158}
   - component: {fileID: 23778576720341328}
   - component: {fileID: 95452588186178604}
+  - component: {fileID: 65953354635150050}
   m_Layer: 0
   m_Name: fire
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1093388668897656}
   m_Mesh: {fileID: 4300000, guid: e4171ed5c5c294103a083fbf47160efd, type: 3}
+--- !u!65 &65953354635150050
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1093388668897656}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7471832, y: 0.26023006, z: 0.74764407}
+  m_Center: {x: 0.000567317, y: 0.12797707, z: 0.0006323308}
 --- !u!95 &95452588186178604
 Animator:
   serializedVersion: 3

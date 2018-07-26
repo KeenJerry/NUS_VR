@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33562281713516262}
   - component: {fileID: 23011549729758110}
   - component: {fileID: 95908738951821988}
+  - component: {fileID: 65579825937519174}
   m_Layer: 0
   m_Name: laddle_lying_back
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1608778016982160}
   m_Mesh: {fileID: 4300000, guid: b5be657e56b82436bb81ab4c2896bf47, type: 3}
+--- !u!65 &65579825937519174
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1608778016982160}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.44026035, y: 0.18955082, z: 0.18969071}
+  m_Center: {x: -0.13668987, y: 0.09427564, z: -0.000086490065}
 --- !u!95 &95908738951821988
 Animator:
   serializedVersion: 3

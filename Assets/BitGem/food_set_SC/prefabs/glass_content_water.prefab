@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33731952410182510}
   - component: {fileID: 23367792648047242}
   - component: {fileID: 95867031509391368}
+  - component: {fileID: 65001494502444636}
   m_Layer: 0
   m_Name: glass_content_water
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1729719588135638}
   m_Mesh: {fileID: 4300000, guid: 192677be953de4f23bb3914fe615ea41, type: 3}
+--- !u!65 &65001494502444636
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1729719588135638}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13527083, y: 0.19806854, z: 0.13527083}
+  m_Center: {x: 0.0000000037252903, y: 0, z: 0}
 --- !u!95 &95867031509391368
 Animator:
   serializedVersion: 3

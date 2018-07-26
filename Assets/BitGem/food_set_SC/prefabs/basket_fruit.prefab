@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33506362486496944}
   - component: {fileID: 23341379661432298}
   - component: {fileID: 95667437223082734}
+  - component: {fileID: 65574720773361396}
   m_Layer: 0
   m_Name: basket_fruit
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1398025569275876}
   m_Mesh: {fileID: 4300000, guid: 2f4273269b6e6408584d5b92e518c7c1, type: 3}
+--- !u!65 &65574720773361396
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1398025569275876}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6503152, y: 0.5198323, z: 0.6278477}
+  m_Center: {x: 0, y: 0.25959793, z: 0.000000014901161}
 --- !u!95 &95667437223082734
 Animator:
   serializedVersion: 3

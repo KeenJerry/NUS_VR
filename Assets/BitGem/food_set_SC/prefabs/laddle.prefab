@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33433568996309520}
   - component: {fileID: 23584462728570258}
   - component: {fileID: 95457607685568406}
+  - component: {fileID: 65415537780026494}
   m_Layer: 0
   m_Name: laddle
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1544073137432184}
   m_Mesh: {fileID: 4300000, guid: 57016bef788bf43c5a51674ec8864cab, type: 3}
+--- !u!65 &65415537780026494
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1544073137432184}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38570344, y: 0.30361956, z: 0.18969071}
+  m_Center: {x: -0.09709945, y: 0.15156409, z: -0.000086490065}
 --- !u!95 &95457607685568406
 Animator:
   serializedVersion: 3
