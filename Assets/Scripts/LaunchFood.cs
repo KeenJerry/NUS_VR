@@ -103,7 +103,9 @@ public class LaunchFood : MonoBehaviour {
                     second = (int)(bufferTime / launchInterval);
                     if (originSecond != second) launchFood();
 
-                    foreach (GameObject food in foodPool)
+                    for (int i = 0; i < foodPool.Length; i++)
+                    {
+                        GameObject food = foodPool[i];
                         if (food.activeSelf)
                         {
                             food.transform.position += new Vector3(0, 0, Time.deltaTime * moveSpeed);
@@ -112,8 +114,10 @@ public class LaunchFood : MonoBehaviour {
                             {
                                 food.SetActive(false);
                                 // some punish
+                                if (inManual(i / poolCap) != -1) statisticsMissCount++;
                             }
                         }
+                    }
                     for (int i = 0; i < piecePool.Length; i++)
                         if (piecePool[i].activeSelf)
                         {
@@ -241,7 +245,21 @@ public class LaunchFood : MonoBehaviour {
                     pieceVelocity[index * pieceEach + j] = new Vector3(UnityEngine.Random.Range(-1, 1), UnityEngine.Random.Range(-1, 1), 0);
                     piecePool[index * pieceEach + j].SetActive(true);
                 }
+
+                // statistics
+                int indexInManual = inManual(index);
+                if (indexInManual == -1) statisticsErrorCount++;
+                else statisticsCount[indexInManual]++;
+
                 break;
             }
+    }
+
+    private int inManual(int index)
+    {
+        for (int i = 0; i < chosen.foods.Length; i++)
+            if (chosen.foods[i].key == FoodSet.foods[index].key)
+                return i;
+        return -1;
     }
 }
