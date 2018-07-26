@@ -36,8 +36,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4049501498913256}
-  - component: {fileID: 114529972984502048}
   - component: {fileID: 114029071065632576}
+  - component: {fileID: 114472620789533018}
   - component: {fileID: 114879000191152476}
   - component: {fileID: 114412027250623570}
   - component: {fileID: 114366946244030820}
@@ -125,7 +125,7 @@ BoxCollider:
   m_GameObject: {fileID: 1712656375043554}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb6d6653511aff5409d0827d4e3b79ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114529972984502048
+--- !u!114 &114472620789533018
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -172,29 +172,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1712656375043554}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43e53a985809f0949b9a42cc2a6888c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 57468e6cbae21894fa42c90413c294ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemPackage: {fileID: 114886069951121230, guid: 6efe47f4a8b52214692739d9fc9c1a0e,
+  itemPackage: {fileID: 114886069951121230, guid: 6efe47f4a8b52214692739d9fc9c1a0e,
     type: 2}
-  requireTriggerPressToTake: 1
-  requireTriggerPressToReturn: 0
-  showTriggerHint: 1
-  attachmentFlags: 15
-  attachmentPoint: 
-  takeBackItem: 0
-  acceptDifferentItems: 0
-  pickupEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  dropEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  justPickedUpItem: 0
 --- !u!114 &114879000191152476
 MonoBehaviour:
   m_ObjectHideFlags: 1
