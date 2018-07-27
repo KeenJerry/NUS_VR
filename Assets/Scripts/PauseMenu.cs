@@ -86,12 +86,11 @@ public class PauseMenu : MonoBehaviour {
         {
             Hand hand = Player.instance.GetHand(i);
             if (hand.controller != null)
-                if (hand.controller.GetTouchDown(Valve.VR.EVRButtonId.k_EButton_SteamVR_Touchpad))
-                {
-                    Vector2 pos = hand.controller.GetAxis();
-                    if (pos != Vector2.zero)
-                        return pos;
-                }
+            {
+                Vector2 pos = hand.controller.GetAxis();
+                if (pos != Vector2.zero)
+                    return pos;
+            }
         }
         return Vector2.zero;
     }
