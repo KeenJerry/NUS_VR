@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 114550943415916686}
   m_Layer: 0
   m_Name: 40mKnife_Pretransform
-  m_TagString: Untagged
+  m_TagString: knife
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
