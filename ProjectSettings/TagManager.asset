@@ -7,6 +7,7 @@ TagManager:
   - projectile
   - food
   - knife
+  - bomb
   layers:
   - Default
   - TransparentFX

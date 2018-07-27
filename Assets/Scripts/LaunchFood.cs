@@ -29,6 +29,7 @@ public class LaunchFood : MonoBehaviour {
     private int second;
 
     private GameObject[] foodPool;
+    private GameObject[] bombPool;
     private GameObject[] piecePool;
     private Vector3[] pieceVelocity;
     private Vector3 geo = new Vector3(0, -9.8f, 0);
@@ -67,6 +68,12 @@ public class LaunchFood : MonoBehaviour {
                 piecePool[k].SetActive(false);
                 piecePool[k].transform.localScale = new Vector3(3, 3, 3);
             }
+        bombPool = new GameObject[poolCap];
+        for (int i = 0; i < poolCap; i++)
+        {
+            bombPool[i] = Instantiate(FoodSet.bomb, foods);
+            bombPool[i].SetActive(false);
+        }
     }
 	
 	// Update is called once per frame
@@ -174,15 +181,26 @@ public class LaunchFood : MonoBehaviour {
 
     private void launchFood()
     {
-        int[] freeFoodIndex = new int[foodPool.Length];
-        int freeFoodCount = 0;
+        List<GameObject> freeFood = new List<GameObject>();
+
+        // collect
         for (int i = 0; i < foodPool.Length; i++)
             if (!foodPool[i].activeSelf)
-                freeFoodIndex[freeFoodCount++] = i;
+            {
+                int dupulicateCount = 1;
+                int index = i / poolCap;
+                if (inManual(index) != -1) dupulicateCount += FoodSet.foods.Length / 2;
+                for (int j = 0; j < dupulicateCount; j++)
+                    freeFood.Add(foodPool[i]);
+            }
+        for (int i = 0; i < poolCap; i++)
+            if (!bombPool[i].activeSelf)
+                for (int j = 0; j < FoodSet.foods.Length; j++)
+                    freeFood.Add(bombPool[i]);
 
-        int choice = freeFoodIndex[UnityEngine.Random.Range(0, freeFoodCount)];
-        foodPool[choice].transform.localPosition = new Vector3(UnityEngine.Random.Range(-3, 4), UnityEngine.Random.Range(-3, 4), 0);
-        foodPool[choice].SetActive(true);
+        GameObject choice = freeFood[UnityEngine.Random.Range(0, freeFood.Count)];
+        choice.transform.localPosition = new Vector3(UnityEngine.Random.Range(-3, 4), UnityEngine.Random.Range(-3, 4), 0);
+        choice.SetActive(true);
     }
 
     public void setManual(int manualIndex)
@@ -268,6 +286,16 @@ public class LaunchFood : MonoBehaviour {
                     statisticsCountText[indexInManual].text = statisticsCount[indexInManual] + "/" + chosen.nums[indexInManual];
                 }
 
+                break;
+            }
+    }
+
+    public void cutBomb(GameObject bomb)
+    {
+        for (int i = 0; i < poolCap; i++)
+            if (bombPool[i] == bomb)
+            {
+                status = Status.END;
                 break;
             }
     }

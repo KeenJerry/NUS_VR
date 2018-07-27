@@ -22,9 +22,12 @@ public class FoodSet : MonoBehaviour {
 
     static public Food[] foods;
     static public Manual[] manuals;
+    static public GameObject bomb;
 
     public GameObject[] objs;
     public GameObject[] pieces;
+
+    public GameObject Bomb;
 
     void Awake() 
     {
@@ -35,6 +38,7 @@ public class FoodSet : MonoBehaviour {
             foods[i].obj = objs[i];
             foods[i].piece = pieces[i];
         }
+        bomb = Bomb;
     }
 	
 	// Update is called once per frame

@@ -9,11 +9,6 @@ public class Cut : MonoBehaviour {
 	void Start () {
         Trajectory = GameObject.Find("Trajectory");
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     private void OnTriggerEnter(Collider other)
     {
@@ -21,6 +16,11 @@ public class Cut : MonoBehaviour {
         {   
             if(Trajectory)
                 Trajectory.GetComponent<LaunchFood>().cutFood(other.gameObject);
+        }
+        if (other.CompareTag("food"))
+        {
+            if (Trajectory)
+                Trajectory.GetComponent<LaunchFood>().cutBomb(other.gameObject);
         }
     }
 }
