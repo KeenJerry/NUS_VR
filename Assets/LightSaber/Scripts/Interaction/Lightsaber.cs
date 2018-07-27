@@ -51,7 +51,7 @@ public class Lightsaber : MonoBehaviour {
         public GameObject gameObject;
 
         // the light attached to the blade
-        public Light light;
+        // public Light light;
 
         // minimum blade length
         private float scaleMin;
@@ -74,14 +74,14 @@ public class Lightsaber : MonoBehaviour {
         {
 
             this.gameObject = gameObject;
-            this.light = gameObject.GetComponentInChildren<Light>();
+            // this.light = gameObject.GetComponentInChildren<Light>();
             this.active = active;
 
             // consistency check
-            if (light == null)
-            {
-                Debug.Log("No light found. Blade should have a light as child");
-            }
+            //if (light == null)
+            //{
+            //    Debug.Log("No light found. Blade should have a light as child");
+            //}
 
             // remember initial scale values (non extending part of the blade)
             this.localScaleX = gameObject.transform.localScale.x;
@@ -117,26 +117,26 @@ public class Lightsaber : MonoBehaviour {
 
         }
 
-        public void SetColor( Color color)
-        {
-            if (light != null)
-            {
-                light.color = color;
-            }
+        //public void SetColor( Color color)
+        //{
+        //    if (light != null)
+        //    {
+        //        light.color = color;
+        //    }
 
-            // TODO: make fail-safe. accessing index 0 of materials and the fixed constant _MKGlowColor is risky
-            gameObject.GetComponent<MeshRenderer>().materials[0].SetColor("_MKGlowColor", color);
+        //    // TODO: make fail-safe. accessing index 0 of materials and the fixed constant _MKGlowColor is risky
+        //    gameObject.GetComponent<MeshRenderer>().materials[0].SetColor("_MKGlowColor", color);
 
-        }
+        //}
 
-        public void updateLight()
-        {
-            if (this.light == null)
-                return;
+        //public void updateLight()
+        //{
+        //    if (this.light == null)
+        //        return;
 
-            // light intensity depending on blade size
-            this.light.intensity = this.scaleCurrent;
-        }
+        //    // light intensity depending on blade size
+        //    this.light.intensity = this.scaleCurrent;
+        //}
 
         public void updateSize()
         {
@@ -220,10 +220,10 @@ public class Lightsaber : MonoBehaviour {
         }
 
         // update blade color, light color and glow color
-        foreach (Blade blade in blades)
-        {
-            blade.SetColor(bladeColor);
-        }
+        //foreach (Blade blade in blades)
+        //{
+        //    blade.SetColor(bladeColor);
+        //}
     }
 	
 	// Update is called once per frame
@@ -337,7 +337,7 @@ public class Lightsaber : MonoBehaviour {
         foreach (Blade blade in blades)
         {
 
-            blade.updateLight();
+            // blade.updateLight();
             blade.updateSize();
 
         }
