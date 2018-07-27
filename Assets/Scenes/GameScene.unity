@@ -9410,7 +9410,8 @@ Prefab:
       propertyPath: m_Text
       value: "Now I will teach you how to use a \nbutton.\r\n\r\nNotice the food around
         the text. You\ncan use your weapon to cut the food,\nwhich means you click
-        the button.\r\n\r\nSo, try to choose a dish that you like!"
+        the button.\r\n\r\nSo, try to choose a dish that you like!\n\nAfter choosing,
+        teleport to the Cutting\nArea. Don't forget to use the touchpad."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 727e3e2c7ce52bc4d8dd1d2bd900ad4c, type: 2}
@@ -34467,7 +34468,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4506515538170442, guid: 04015456f1d347d46a910c28630b2fc5, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1433930842222616, guid: 04015456f1d347d46a910c28630b2fc5, type: 2}
       propertyPath: m_Name
