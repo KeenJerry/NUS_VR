@@ -5,15 +5,10 @@ using UnityEngine;
 public class LookAtCamera : MonoBehaviour {
     static public GameObject camera;
 
+    public GameObject vrCamera;
     // Use this for initialization
     void Start () {
-        string[] possibleCameraNameList = new string[] { "VRCamera", "VRCamera (eye)", "Camera", "MainCamera" };
-        foreach (string cameraName in possibleCameraNameList)
-        {
-            GameObject temp = GameObject.Find(cameraName);
-            if (temp != null)
-                camera = GameObject.Find("VRCamera");
-        }
+        camera = vrCamera;
     }
 	
 	// Update is called once per frame

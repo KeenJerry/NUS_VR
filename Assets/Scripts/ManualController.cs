@@ -12,7 +12,6 @@ public class ManualController : MonoBehaviour {
     public Transform foods;
     public Transform texts;
     public float showWidth = 10;
-    private Transform camera;
 
     public LaunchFood launcher;
 
@@ -30,7 +29,6 @@ public class ManualController : MonoBehaviour {
         if (switchInterval <= 0) switchInterval = 0.5f;
         bufferTime = switchInterval - 0.05f;
         manuals = FoodSet.manuals;
-        camera = LookAtCamera.camera.transform;
     }
 	
 	// Update is called once per frame
@@ -133,7 +131,7 @@ public class ManualController : MonoBehaviour {
                 tempText = new GameObject();
                 tempText.transform.parent = texts;
                 tempText.transform.position = texts.position + offset;
-                tempText.transform.LookAt(tempText.transform.position + tempText.transform.position - camera.position);
+                tempText.transform.LookAt(tempText.transform.position + tempText.transform.position - LookAtCamera.camera.transform.position);
                 tempText.AddComponent<TextMesh>();
                 tempText.GetComponent<TextMesh>().text = "X" + manuals[pageIndex].nums[i];
                 tempText.GetComponent<TextMesh>().anchor = TextAnchor.MiddleCenter;

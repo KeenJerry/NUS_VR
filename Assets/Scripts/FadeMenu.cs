@@ -9,20 +9,17 @@ public class FadeMenu : MonoBehaviour {
 
     public float minDis = 15;
     public float maxDis = 20;
-
-    private Transform camera;
+    
     private float lastDis;
 
 	// Use this for initialization
 	void Start () {
-        camera = LookAtCamera.camera.transform;
-
         lastDis = (minDis + maxDis) / 2;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        float dis = (transform.position - camera.transform.position).magnitude;
+        float dis = (transform.position - LookAtCamera.camera.transform.position).magnitude;
 		if (lastDis >= minDis && lastDis <= maxDis)
         {
             float opacity;
