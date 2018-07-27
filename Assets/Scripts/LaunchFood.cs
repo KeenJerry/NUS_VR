@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR.InteractionSystem;
 
 public class LaunchFood : MonoBehaviour {
     private FoodSet.Manual chosen = null;
@@ -92,10 +93,9 @@ public class LaunchFood : MonoBehaviour {
                 }
                 break;
             case Status.LAUNCH:
-                if (Input.GetKeyDown(KeyCode.Escape))
+                if (applicationDown())
                 {
                     status = Status.PAUSE;
-                    // show menu
                 }
                 else
                 {
@@ -133,21 +133,6 @@ public class LaunchFood : MonoBehaviour {
                             if (piece.transform.position.y < potHeight)
                                 piece.SetActive(false);
                         }
-
-                    // test
-                    if (Input.GetKeyDown(KeyCode.C))
-                    {
-                        float front = 45;
-                        int index = -1;
-                        for (int i = 0; i < foodPool.Length; i++)
-                            if (foodPool[i].activeSelf)
-                                if (foodPool[i].transform.position.z > front)
-                                {
-                                    front = foodPool[i].transform.position.z;
-                                    index = i;
-                                }
-                        if (index != -1) cutFood(foodPool[index]);
-                    }
                 }
                 break;
             case Status.END:
@@ -162,7 +147,7 @@ public class LaunchFood : MonoBehaviour {
                 status = Status.FREE;
                 break;
             case Status.PAUSE:
-                if (Input.GetKeyDown(KeyCode.Escape))
+                if (applicationDown())
                 {
                     status = Status.LAUNCH;
                     // hide menu
@@ -277,5 +262,17 @@ public class LaunchFood : MonoBehaviour {
             if (chosen.foods[i].key == FoodSet.foods[index].key)
                 return i;
         return -1;
+    }
+
+    bool applicationDown()
+    {
+        for (int i = 0; i < Player.instance.handCount; i++)
+        {
+            Hand hand = Player.instance.GetHand(i);
+            if (hand.controller != null)
+                if (hand.controller.GetPressDown(Valve.VR.EVRButtonId.k_EButton_ApplicationMenu))
+                    return true;
+        }
+        return false;
     }
 }
