@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,26 +27,39 @@ public class FadeMenu : MonoBehaviour {
             if (dis <= minDis) opacity = 1;
             else if (dis >= maxDis) opacity = 0;
             else opacity = (maxDis - dis) / (maxDis - minDis);
-            
-            foreach(SpriteRenderer img in imgs)
-            {
-                Color color = img.color;
-                color.a = opacity;
-                img.color = color;
-            }
-            foreach(TextMesh text in texts)
-            {
-                Color color = text.color;
-                color.a = opacity;
-                text.color = color;
-            }
-            foreach(MeshRenderer obj in objs)
-            {
-                Color color = obj.material.color;
-                color.a = opacity;
-                obj.material.color = color;
-            }
+
+            setOpacity(opacity);
+        }
+        else if (lastDis < minDis && dis > maxDis)
+        {
+            setOpacity(0);
+        }
+        else if (lastDis > maxDis && dis < minDis)
+        {
+            setOpacity(1);
         }
         lastDis = dis;
+    }
+
+    private void setOpacity(float opacity)
+    {
+        foreach (SpriteRenderer img in imgs)
+        {
+            Color color = img.color;
+            color.a = opacity;
+            img.color = color;
+        }
+        foreach (TextMesh text in texts)
+        {
+            Color color = text.color;
+            color.a = opacity;
+            text.color = color;
+        }
+        foreach (MeshRenderer obj in objs)
+        {
+            Color color = obj.material.color;
+            color.a = opacity;
+            obj.material.color = color;
+        }
     }
 }

@@ -194,7 +194,7 @@ public class LaunchFood : MonoBehaviour {
                     GameObject tempFood;
                     tempFood = Instantiate(chosen.foods[i].obj, statisticsFoods);
                     tempFood.transform.localPosition = offset;
-                    tempFood.transform.localScale = new Vector3(3, 3, 3);
+                    tempFood.transform.localScale = new Vector3(5, 5, 5);
                     GameObject tempText;
                     tempText = new GameObject();
                     tempText.transform.parent = statisticsText;
@@ -203,7 +203,7 @@ public class LaunchFood : MonoBehaviour {
                     tempText.AddComponent<TextMesh>();
                     statisticsCountText[i] = tempText.GetComponent<TextMesh>();
                     statisticsCountText[i].text = 0 + "/" + chosen.nums[i];
-                    statisticsCountText[i].anchor = TextAnchor.LowerLeft;
+                    statisticsCountText[i].anchor = TextAnchor.MiddleCenter;
                     statisticsCountText[i].characterSize = 0.2f;
                     statisticsCountText[i].fontSize = 60;
                 }
