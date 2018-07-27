@@ -18556,6 +18556,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114530125463572312, guid: 9f8e2770c985f1748b8a1f15724c6d96,
+        type: 2}
+      propertyPath: resetButton.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4199545350859436, guid: 9f8e2770c985f1748b8a1f15724c6d96, type: 2}
       propertyPath: m_LocalPosition.x
       value: -79.864
@@ -18598,6 +18603,56 @@ Prefab:
       propertyPath: launcher
       value: 
       objectReference: {fileID: 1192999223}
+    - target: {fileID: 114530125463572312, guid: 9f8e2770c985f1748b8a1f15724c6d96,
+        type: 2}
+      propertyPath: resetButton.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114530125463572312, guid: 9f8e2770c985f1748b8a1f15724c6d96,
+        type: 2}
+      propertyPath: resetButton.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114530125463572312, guid: 9f8e2770c985f1748b8a1f15724c6d96,
+        type: 2}
+      propertyPath: resetButton.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1886138445}
+    - target: {fileID: 114530125463572312, guid: 9f8e2770c985f1748b8a1f15724c6d96,
+        type: 2}
+      propertyPath: resetButton.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114530125463572312, guid: 9f8e2770c985f1748b8a1f15724c6d96,
+        type: 2}
+      propertyPath: resetButton.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114530125463572312, guid: 9f8e2770c985f1748b8a1f15724c6d96,
+        type: 2}
+      propertyPath: resetButton.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1688234237}
+    - target: {fileID: 114530125463572312, guid: 9f8e2770c985f1748b8a1f15724c6d96,
+        type: 2}
+      propertyPath: resetButton.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: resetIcon
+      objectReference: {fileID: 0}
+    - target: {fileID: 114530125463572312, guid: 9f8e2770c985f1748b8a1f15724c6d96,
+        type: 2}
+      propertyPath: resetButton.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114530125463572312, guid: 9f8e2770c985f1748b8a1f15724c6d96,
+        type: 2}
+      propertyPath: resetButton.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: resetIcon
+      objectReference: {fileID: 0}
+    - target: {fileID: 114530125463572312, guid: 9f8e2770c985f1748b8a1f15724c6d96,
+        type: 2}
+      propertyPath: resetButton.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f8e2770c985f1748b8a1f15724c6d96, type: 2}
   m_IsPrefabParent: 0
@@ -30043,6 +30098,12 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 452248, guid: a3e7c95ca91ca9a4e92da25a90e61119, type: 2}
   m_PrefabInternal: {fileID: 727764533}
+--- !u!114 &1688234237 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114632796764815978, guid: 9f8e2770c985f1748b8a1f15724c6d96,
+    type: 2}
+  m_PrefabInternal: {fileID: 1028362956}
+  m_Script: {fileID: 11500000, guid: 61712ff7ae10ae046a3bb9214dedc722, type: 3}
 --- !u!4 &1688444460 stripped
 Transform:
   m_PrefabParentObject: {fileID: 424662, guid: 7ff66a49d439e7d499587f58d0455012, type: 2}
@@ -31858,6 +31919,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 37.59606, y: 0.85, z: 37.59606}
   m_Center: {x: -18.79803, y: -0.39, z: 18.79803}
+--- !u!114 &1886138445 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114888693572472582, guid: 9f8e2770c985f1748b8a1f15724c6d96,
+    type: 2}
+  m_PrefabInternal: {fileID: 1028362956}
+  m_Script: {fileID: 11500000, guid: 61712ff7ae10ae046a3bb9214dedc722, type: 3}
 --- !u!1001 &1886407048
 Prefab:
   m_ObjectHideFlags: 0

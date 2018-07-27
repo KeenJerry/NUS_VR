@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ManualController : MonoBehaviour {
     public TextMesh title;
@@ -14,6 +15,8 @@ public class ManualController : MonoBehaviour {
     public float showWidth = 10;
 
     public LaunchFood launcher;
+
+    public UnityEvent resetButton;
 
     private int pageIndex = -1;
     private int newPageIndex = -1;
@@ -40,6 +43,7 @@ public class ManualController : MonoBehaviour {
             {
                 bufferTime = 0;
                 canSwitch = true;
+                resetButton.Invoke();
                 if (pageIndex < 0 || pageIndex >= manuals.Length)
                     setPage(0);
             }
@@ -69,25 +73,26 @@ public class ManualController : MonoBehaviour {
     public void previewPage()
     {
         if (canSwitch)
+        {
+            canSwitch = false;
+            bufferTime = 0;
             if (pageIndex > 0)
-            {
-                canSwitch = false;
-                bufferTime = 0;
                 newPageIndex = pageIndex - 1;
-                isSwitched = false;
-            }
+            else newPageIndex = manuals.Length - 1;
+            isSwitched = false;
+        }
     }
 
     public void nextPage()
     {
         if (canSwitch)
-            if (pageIndex < manuals.Length - 1)
-            {
-                canSwitch = false;
-                bufferTime = 0;
-                newPageIndex = pageIndex + 1;
-                isSwitched = false;
-            }
+        {
+            canSwitch = false;
+            bufferTime = 0;
+            if (pageIndex == manuals.Length - 1) newPageIndex = 0;
+            else newPageIndex = pageIndex + 1;
+            isSwitched = false;
+        }
     }
 
     public void chooseManual()
