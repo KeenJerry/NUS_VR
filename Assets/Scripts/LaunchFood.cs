@@ -224,6 +224,7 @@ public class LaunchFood : MonoBehaviour {
 
     public void cutFood(GameObject food)
     {
+        if (status != Status.LAUNCH) return;
         for (int i = 0; i < foodPool.Length; i++)
             if (foodPool[i] == food)
             {
