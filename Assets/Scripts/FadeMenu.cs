@@ -15,7 +15,7 @@ public class FadeMenu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        camera = GameObject.Find("VRCamera").transform;
+        camera = LookAtCamera.camera.transform;
 
         lastDis = (minDis + maxDis) / 2;
     }

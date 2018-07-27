@@ -17,7 +17,7 @@ public class PauseMenu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        camera = GameObject.Find("VRCamera").transform;
+        camera = LookAtCamera.camera.transform;
 	}
 
 	// Update is called once per frame

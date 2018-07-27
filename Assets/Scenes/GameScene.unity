@@ -22255,6 +22255,16 @@ Prefab:
       propertyPath: launcher
       value: 
       objectReference: {fileID: 1192999223}
+    - target: {fileID: 114888693572472582, guid: 9f8e2770c985f1748b8a1f15724c6d96,
+        type: 2}
+      propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: previewPage
+      objectReference: {fileID: 0}
+    - target: {fileID: 114632796764815978, guid: 9f8e2770c985f1748b8a1f15724c6d96,
+        type: 2}
+      propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: nextPage
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f8e2770c985f1748b8a1f15724c6d96, type: 2}
   m_IsPrefabParent: 0
@@ -32108,7 +32118,9 @@ Prefab:
       propertyPath: location
       value: 
       objectReference: {fileID: 1742802991}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 95843307447795436, guid: d856a9408e17c9841897dfa8fc9b9421, type: 2}
+    - {fileID: 95281781869482556, guid: d856a9408e17c9841897dfa8fc9b9421, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d856a9408e17c9841897dfa8fc9b9421, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1914962407 stripped
