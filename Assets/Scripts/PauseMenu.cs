@@ -26,7 +26,7 @@ public class PauseMenu : MonoBehaviour {
             {
                 open = true;
                 dir = (location.position - LookAtCamera.camera.transform.position).normalized;
-                transform.position = dir * maxDis + location.position;
+                transform.position = dir * maxDis + LookAtCamera.camera.transform.position;
             }
         }
 
