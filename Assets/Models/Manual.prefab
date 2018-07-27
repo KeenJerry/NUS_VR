@@ -1469,8 +1469,8 @@ MonoBehaviour:
   objs:
   - {fileID: 23759881997723860}
   - {fileID: 23920512174396374}
-  minDis: 4
-  maxDis: 6
+  minDis: 10
+  maxDis: 20
 --- !u!114 &114888693572472582
 MonoBehaviour:
   m_ObjectHideFlags: 1

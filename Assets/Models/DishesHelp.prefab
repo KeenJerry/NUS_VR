@@ -124,7 +124,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1623439094941194}
   m_LocalRotation: {x: -0.05519274, y: -0.82656467, z: -0.0824748, w: 0.55402404}
-  m_LocalPosition: {x: -89, y: 10.81, z: 25.89}
+  m_LocalPosition: {x: -73.59, y: 8.03, z: 24.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4589077140741380}
@@ -148,7 +148,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: b2bc6bb761df7db4091d3a3cab7369bc, type: 3}
+  - {fileID: 2100000, guid: 25413f1e848a3b44b8ba1b4e4de19745, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -183,7 +183,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: b2bc6bb761df7db4091d3a3cab7369bc, type: 3}
+  - {fileID: 2100000, guid: 25413f1e848a3b44b8ba1b4e4de19745, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -231,11 +231,10 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1381156623052662}
-  m_Text: "As an excellent chef, you are going\nto make a rich meal. We have listed\nseveral
-    dishes for you.\r\nYou need to choose some dishes out \nof the manifest and make
-    them on \ntime. The materials will be told in the \nrecipe and will pump out in
-    front of \nyou. The only thing you have to do is \nto cut the correct material
-    which is in \nthe recipe by you knife and control \nthe number."
+  m_Text: "Now I will teach you how to use a \nbutton.\r\n\r\nNotice the food around
+    the text. You\ncan use your weapon to cut the food,\nwhich means you click the
+    button.\r\n\r\nSo, try to choose a dish that you like!\n\nAfter choosing, teleport
+    to the Cutting\nArea. Don't forget to use the touchpad."
   m_OffsetZ: 0
   m_CharacterSize: 0.5
   m_LineSpacing: 1
@@ -279,6 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85328f5efe11d0544b58547b99bd2aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vrCamera: {fileID: 0}
 --- !u!212 &212716713910168744
 SpriteRenderer:
   m_ObjectHideFlags: 1

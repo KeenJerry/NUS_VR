@@ -430,7 +430,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: b2bc6bb761df7db4091d3a3cab7369bc, type: 3}
+  - {fileID: 2100000, guid: 25413f1e848a3b44b8ba1b4e4de19745, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -570,7 +570,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: b2bc6bb761df7db4091d3a3cab7369bc, type: 3}
+  - {fileID: 2100000, guid: 25413f1e848a3b44b8ba1b4e4de19745, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -605,7 +605,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: b2bc6bb761df7db4091d3a3cab7369bc, type: 3}
+  - {fileID: 2100000, guid: 25413f1e848a3b44b8ba1b4e4de19745, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -792,6 +792,7 @@ MonoBehaviour:
   iconID: 0
   scale: 3
   speed: 180
+  maxPieceTime: 1
   iconOffset: {x: 0, y: 0, z: 0}
   onTrigger:
     m_PersistentCalls:

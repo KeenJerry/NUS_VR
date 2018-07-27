@@ -148,7 +148,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: b2bc6bb761df7db4091d3a3cab7369bc, type: 3}
+  - {fileID: 2100000, guid: 25413f1e848a3b44b8ba1b4e4de19745, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -183,7 +183,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: b2bc6bb761df7db4091d3a3cab7369bc, type: 3}
+  - {fileID: 2100000, guid: 25413f1e848a3b44b8ba1b4e4de19745, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -210,11 +210,10 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1174689156470094}
-  m_Text: "As an excellent chef, you are going\nto make a rich meal. We have listed\nseveral
-    dishes for you.\r\nYou need to choose some dishes out \nof the manifest and make
-    them on \ntime. The materials will be told in the \nrecipe and will pump out in
-    front of \nyou. The only thing you have to do is \nto cut the correct material
-    which is in \nthe recipe by you knife and control \nthe number."
+  m_Text: "Welcome to Happy Kitchen!\r\n\r\nIn this kitchen, you need to cut some\nkinds
+    of food to make dishes.\r\n\r\nFirstly, please pick up a knife(actually\na weapon).
+    You need it to cut food and\nmake some choices.\r\n\r\nAfter choosing, you can
+    press touchpad \nto teleport to the Dishes Area."
   m_OffsetZ: 0
   m_CharacterSize: 0.5
   m_LineSpacing: 1
@@ -279,6 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85328f5efe11d0544b58547b99bd2aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vrCamera: {fileID: 0}
 --- !u!212 &212501599285476810
 SpriteRenderer:
   m_ObjectHideFlags: 1
