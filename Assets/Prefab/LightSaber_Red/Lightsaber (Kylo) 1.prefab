@@ -799,9 +799,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bladeGameObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1876775791488748}
+  - {fileID: 1760838166345342}
+  - {fileID: 1373314593236890}
   bladeExtendSpeed: 0.2
   saberActive: 1
   bladeColor: {r: 0.64705884, g: 0, b: 0, a: 1}
