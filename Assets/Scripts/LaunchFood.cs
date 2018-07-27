@@ -12,7 +12,7 @@ public class LaunchFood : MonoBehaviour {
     private int statisticsErrorCount;
     private enum Status
     {
-        FREE, PREPARE, LAUNCH, PAUSE, END
+        FREE, WAITING, PREPARE, LAUNCH, PAUSE, END
     };
     private Status status = Status.FREE;
 
@@ -34,6 +34,9 @@ public class LaunchFood : MonoBehaviour {
     private Vector3 geo = new Vector3(0, -9.8f, 0);
     private int poolCap = 5;
     private int pieceEach = 3;
+
+    public GameObject startButton;
+    public TextMesh startButtonText;
 
     public float statisticsHeight = 11;
     public float moveSpeed = 10;
@@ -74,6 +77,8 @@ public class LaunchFood : MonoBehaviour {
                 bufferTime = 0;
                 second = 0;
                 break;
+            case Status.WAITING:
+                break;
             case Status.PREPARE:
                 {
                     int originsecond = second;
@@ -83,10 +88,12 @@ public class LaunchFood : MonoBehaviour {
                     {
                         Debug.Log(second);
                         // show count
+                        startButtonText.text = "" + (4 - second);
                     }
                     if (second == prepareCount)
                     {
                         status = Status.LAUNCH;
+                        startButton.SetActive(false);
                         bufferTime = 0;
                         second = 0;
                     }
@@ -96,6 +103,7 @@ public class LaunchFood : MonoBehaviour {
                 if (applicationDown())
                 {
                     status = Status.PAUSE;
+                    CuttingHelpController.show = true;
                 }
                 else
                 {
@@ -151,6 +159,7 @@ public class LaunchFood : MonoBehaviour {
                 {
                     status = Status.LAUNCH;
                     // hide menu
+                    CuttingHelpController.show = false;
                 }
                 break;
         }
@@ -178,10 +187,13 @@ public class LaunchFood : MonoBehaviour {
 
     public void setManual(int manualIndex)
     {
-        if (status == Status.FREE)
+        if (status == Status.FREE || status == Status.WAITING)
             if (manualIndex >= 0 && manualIndex < FoodSet.manuals.Length)
             {
                 chosen = FoodSet.manuals[manualIndex];
+
+                clearChildren(statisticsFoods);
+                clearChildren(statisticsText);
 
                 // create statistics
                 int count = chosen.foods.Length;
@@ -218,7 +230,10 @@ public class LaunchFood : MonoBehaviour {
                 statisticsMiss.gameObject.SetActive(true);
                 statisticsError.gameObject.SetActive(true);
 
-                status = Status.PREPARE;
+                startButton.SetActive(true);
+                CuttingHelpController.show = true;
+
+                status = Status.WAITING;
             }
     }
 
@@ -275,5 +290,12 @@ public class LaunchFood : MonoBehaviour {
                     return true;
         }
         return false;
+    }
+
+    public void StartGame()
+    {
+        status = Status.PREPARE;
+        startButtonText.text = "3";
+        CuttingHelpController.show = false;
     }
 }
