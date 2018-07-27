@@ -53,8 +53,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: LightSaber_Red_ItemPackage
   packageType: 0
-  itemPrefab: {fileID: 1064129935322864, guid: ced9e80f10263004d99203849ea521e2, type: 2}
+  itemPrefab: {fileID: 1651161311291092, guid: ced9e80f10263004d99203849ea521e2, type: 2}
   otherHandItemPrefab: {fileID: 0}
-  previewPrefab: {fileID: 1759490789991788, guid: d59f7cff42f864442ad0ca64f06e9e36,
+  previewPrefab: {fileID: 1266798586050890, guid: 6020fc4741c968e40a41aa86c6916438,
     type: 2}
   fadedPreviewPrefab: {fileID: 173732, guid: 81fc1450441aca64e8cc1a0e14b1aa77, type: 2}
