@@ -190,7 +190,7 @@ public class LaunchFood : MonoBehaviour {
                 for (int i = 0; i < count; i++)
                 {
                     statisticsCount[i] = 0;
-                    Vector3 offset = new Vector3(0, -statisticsHeight / 2 + (i + 1) * statisticsHeight / (count + 1), 0);
+                    Vector3 offset = new Vector3(-statisticsHeight / 2 + (i + 1) * statisticsHeight / (count + 1), 0, 0);
                     GameObject tempFood;
                     tempFood = Instantiate(chosen.foods[i].obj, statisticsFoods);
                     tempFood.transform.localPosition = offset;
