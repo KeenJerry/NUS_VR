@@ -294,8 +294,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1580496669525326}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20.8169, y: 1, z: 9.125562}
+  m_LocalPosition: {x: 0, y: 0, z: 0.91}
+  m_LocalScale: {x: 37.470917, y: 1, z: 9.125562}
   m_Children:
   - {fileID: 4278791797811754}
   m_Father: {fileID: 4854659363167978}
@@ -619,7 +619,7 @@ MonoBehaviour:
   statisticsError: {fileID: 102300758481812212}
   prepareCount: 3
   launchInterval: 1
-  statisticsHeight: 11
+  statisticsHeight: 20
   moveSpeed: 10
   rotateSpeed: 180
   trajectoryLength: 64

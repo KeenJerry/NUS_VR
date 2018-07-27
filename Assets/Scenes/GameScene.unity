@@ -1210,16 +1210,6 @@ Prefab:
       propertyPath: launcher
       value: 
       objectReference: {fileID: 1192999223}
-    - target: {fileID: 114853975377739966, guid: 9f8e2770c985f1748b8a1f15724c6d96,
-        type: 2}
-      propertyPath: minDis
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114853975377739966, guid: 9f8e2770c985f1748b8a1f15724c6d96,
-        type: 2}
-      propertyPath: maxDis
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f8e2770c985f1748b8a1f15724c6d96, type: 2}
   m_IsPrefabParent: 0
@@ -9394,24 +9384,6 @@ Prefab:
     - target: {fileID: 4766150360328642, guid: 727e3e2c7ce52bc4d8dd1d2bd900ad4c, type: 2}
       propertyPath: m_RootOrder
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 23850501631151858, guid: 727e3e2c7ce52bc4d8dd1d2bd900ad4c,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 25413f1e848a3b44b8ba1b4e4de19745, type: 2}
-    - target: {fileID: 23823147012501406, guid: 727e3e2c7ce52bc4d8dd1d2bd900ad4c,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 25413f1e848a3b44b8ba1b4e4de19745, type: 2}
-    - target: {fileID: 102819499393703146, guid: 727e3e2c7ce52bc4d8dd1d2bd900ad4c,
-        type: 2}
-      propertyPath: m_Text
-      value: "Now I will teach you how to use a \nbutton.\r\n\r\nNotice the food around
-        the text. You\ncan use your weapon to cut the food,\nwhich means you click
-        the button.\r\n\r\nSo, try to choose a dish that you like!\n\nAfter choosing,
-        teleport to the Cutting\nArea. Don't forget to use the touchpad."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 727e3e2c7ce52bc4d8dd1d2bd900ad4c, type: 2}
@@ -20061,19 +20033,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 4411507325062234, guid: a113d5fdf2ab33148a46082e6834bb53, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 37.470917
-      objectReference: {fileID: 0}
-    - target: {fileID: 4411507325062234, guid: a113d5fdf2ab33148a46082e6834bb53, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 114346631185817758, guid: a113d5fdf2ab33148a46082e6834bb53,
-        type: 2}
-      propertyPath: statisticsHeight
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a113d5fdf2ab33148a46082e6834bb53, type: 2}
   m_IsPrefabParent: 0
@@ -20501,24 +20460,6 @@ Prefab:
     - target: {fileID: 4729961117308324, guid: 789e13dc9b4b4a14896b95bdfe95a9ec, type: 2}
       propertyPath: m_RootOrder
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 23086018731864998, guid: 789e13dc9b4b4a14896b95bdfe95a9ec,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 25413f1e848a3b44b8ba1b4e4de19745, type: 2}
-    - target: {fileID: 23933265490736756, guid: 789e13dc9b4b4a14896b95bdfe95a9ec,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 25413f1e848a3b44b8ba1b4e4de19745, type: 2}
-    - target: {fileID: 102342595770408100, guid: 789e13dc9b4b4a14896b95bdfe95a9ec,
-        type: 2}
-      propertyPath: m_Text
-      value: "Welcome to Happy Kitchen!\r\n\r\nIn this kitchen, you need to cut some\nkinds
-        of food to make dishes.\r\n\r\nFirstly, please pick up a knife(actually\na
-        weapon). You need it to cut food and\nmake some choices.\r\n\r\nAfter choosing,
-        you can press touchpad \nto teleport to the Dishes Area."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 789e13dc9b4b4a14896b95bdfe95a9ec, type: 2}
@@ -32864,21 +32805,6 @@ Prefab:
       propertyPath: location
       value: 
       objectReference: {fileID: 1742802991}
-    - target: {fileID: 23831313120109444, guid: d856a9408e17c9841897dfa8fc9b9421,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 25413f1e848a3b44b8ba1b4e4de19745, type: 2}
-    - target: {fileID: 23927513574946604, guid: d856a9408e17c9841897dfa8fc9b9421,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 25413f1e848a3b44b8ba1b4e4de19745, type: 2}
-    - target: {fileID: 23205709955761272, guid: d856a9408e17c9841897dfa8fc9b9421,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 25413f1e848a3b44b8ba1b4e4de19745, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d856a9408e17c9841897dfa8fc9b9421, type: 2}
   m_IsPrefabParent: 0
