@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33744836196911432}
   - component: {fileID: 23486469046202536}
   - component: {fileID: 95745383520476562}
+  - component: {fileID: 65648129129971002}
   m_Layer: 0
   m_Name: bowl_small_silver
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1554700026021276}
   m_Mesh: {fileID: 4300000, guid: 60c5e94bfdc1f4bbc92c0daf5ef75973, type: 3}
+--- !u!65 &65648129129971002
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1554700026021276}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.29365325, y: 0.10281511, z: 0.29365325}
+  m_Center: {x: 0, y: 0.05140757, z: 0}
 --- !u!95 &95745383520476562
 Animator:
   serializedVersion: 3

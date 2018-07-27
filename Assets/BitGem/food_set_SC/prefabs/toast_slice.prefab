@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33754870202057894}
   - component: {fileID: 23911384697703688}
   - component: {fileID: 95098469291776070}
+  - component: {fileID: 65688456963690518}
   m_Layer: 0
   m_Name: toast_slice
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1185333842821280}
   m_Mesh: {fileID: 4300000, guid: 318457f36e12b4010b3263ca23772c32, type: 3}
+--- !u!65 &65688456963690518
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1185333842821280}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.29725182, y: 0.08583336, z: 0.3052597}
+  m_Center: {x: 0.14862591, y: 0.04291668, z: 0}
 --- !u!95 &95098469291776070
 Animator:
   serializedVersion: 3

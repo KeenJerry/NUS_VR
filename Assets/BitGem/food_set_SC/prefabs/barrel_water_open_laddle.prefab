@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33475173022573558}
   - component: {fileID: 23694121274896900}
   - component: {fileID: 95553887053714782}
+  - component: {fileID: 65832263462656838}
   m_Layer: 0
   m_Name: barrel_water_open_laddle
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1038950148490812}
   m_Mesh: {fileID: 4300000, guid: 40f4a023ed97349e2bae1a3465559fe8, type: 3}
+--- !u!65 &65832263462656838
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1038950148490812}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1813515, y: 1.1685108, z: 1.1534775}
+  m_Center: {x: -0.142471, y: 0.5836999, z: 0.11099732}
 --- !u!95 &95553887053714782
 Animator:
   serializedVersion: 3

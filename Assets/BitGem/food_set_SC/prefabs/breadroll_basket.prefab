@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33985486156874212}
   - component: {fileID: 23556271207313010}
   - component: {fileID: 95152658414613350}
+  - component: {fileID: 65285112493384858}
   m_Layer: 0
   m_Name: breadroll_basket
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1875154736197700}
   m_Mesh: {fileID: 4300000, guid: 2676b586680914933b4304411a11fb0d, type: 3}
+--- !u!65 &65285112493384858
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1875154736197700}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.48098433, y: 0.30449104, z: 0.47463167}
+  m_Center: {x: 0.00047160685, y: 0.15224552, z: 0.000000022351742}
 --- !u!95 &95152658414613350
 Animator:
   serializedVersion: 3

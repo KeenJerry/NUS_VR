@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33003285906439636}
   - component: {fileID: 23308084414137344}
   - component: {fileID: 95543052395411306}
+  - component: {fileID: 65856263647541882}
   m_Layer: 0
   m_Name: banana_bunch
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1255057093998440}
   m_Mesh: {fileID: 4300000, guid: 6bf96a21093a942148172c44bf82d642, type: 3}
+--- !u!65 &65856263647541882
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1255057093998440}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40487558, y: 0.2946295, z: 0.3874306}
+  m_Center: {x: -0.014523044, y: -0.0047604814, z: 0.000000007450581}
 --- !u!95 &95543052395411306
 Animator:
   serializedVersion: 3

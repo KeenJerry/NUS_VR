@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33522949052191292}
   - component: {fileID: 23322961170667570}
   - component: {fileID: 95651890801343838}
+  - component: {fileID: 65180330693928866}
   m_Layer: 0
   m_Name: glass_wine_content
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1107978693686892}
   m_Mesh: {fileID: 4300000, guid: bfb7c3c3f4a1945a280086801a1c71f3, type: 3}
+--- !u!65 &65180330693928866
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1107978693686892}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.19945824, y: 0.18266332, z: 0.19945827}
+  m_Center: {x: 0.00006838143, y: 0.22133166, z: -0.0008484237}
 --- !u!95 &95651890801343838
 Animator:
   serializedVersion: 3

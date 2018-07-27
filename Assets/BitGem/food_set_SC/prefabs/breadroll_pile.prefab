@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33524205172973156}
   - component: {fileID: 23233469639284332}
   - component: {fileID: 95515754813170916}
+  - component: {fileID: 65353434212583894}
   m_Layer: 0
   m_Name: breadroll_pile
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1756286598543606}
   m_Mesh: {fileID: 4300000, guid: 40267d526510743fd85e867b4ee84c3c, type: 3}
+--- !u!65 &65353434212583894
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1756286598543606}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.45529148, y: 0.22320563, z: 0.43835807}
+  m_Center: {x: 0, y: 0.10918972, z: 0}
 --- !u!95 &95515754813170916
 Animator:
   serializedVersion: 3

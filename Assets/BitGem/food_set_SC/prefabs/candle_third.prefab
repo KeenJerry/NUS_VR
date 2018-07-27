@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33858874924477568}
   - component: {fileID: 23727071564930630}
   - component: {fileID: 95946797552462450}
+  - component: {fileID: 65390780520679900}
   m_Layer: 0
   m_Name: candle_third
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1517981765876058}
   m_Mesh: {fileID: 4300000, guid: 5546b927185504b93bdaf559d8b56552, type: 3}
+--- !u!65 &65390780520679900
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1517981765876058}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.18345392, y: 0.31201422, z: 0.1834539}
+  m_Center: {x: 0.0000000037252903, y: 0.15600711, z: 0}
 --- !u!95 &95946797552462450
 Animator:
   serializedVersion: 3

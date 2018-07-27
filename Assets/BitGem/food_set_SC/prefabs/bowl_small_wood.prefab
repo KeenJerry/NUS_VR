@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33006510636459864}
   - component: {fileID: 23466593161801926}
   - component: {fileID: 95945946203066556}
+  - component: {fileID: 65124471085178168}
   m_Layer: 0
   m_Name: bowl_small_wood
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1758472398071150}
   m_Mesh: {fileID: 4300000, guid: 811e79219adc7471e81c3cd5e76dbbb3, type: 3}
+--- !u!65 &65124471085178168
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1758472398071150}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.29365295, y: 0.12677792, z: 0.29365325}
+  m_Center: {x: 0, y: 0.06338896, z: 0}
 --- !u!95 &95945946203066556
 Animator:
   serializedVersion: 3

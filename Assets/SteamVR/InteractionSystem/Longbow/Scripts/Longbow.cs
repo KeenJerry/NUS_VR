@@ -38,7 +38,7 @@ namespace Valve.VR.InteractionSystem
 		public bool pulled;
 
 		private const float minPull = 0.05f;
-		private const float maxPull = 0.5f;
+		private const float maxPull = 4f;
 		private float nockDistanceTravelled = 0f;
 		private float hapticDistanceThreshold = 0.01f;
 		private float lastTickDistance;
@@ -175,7 +175,7 @@ namespace Valve.VR.InteractionSystem
 
 					arrowVelocity = Util.RemapNumber( nockDistanceTravelled, minPull, maxPull, arrowMinVelocity, arrowMaxVelocity );
 
-					drawTension = Util.RemapNumberClamped( nockDistanceTravelled, 0, maxPull, 0f, 1f );
+					drawTension = Util.RemapNumberClamped(nockDistanceTravelled, 0, maxPull, 0f, 1f );
 
 					this.bowDrawLinearMapping.value = drawTension; // Send drawTension value to LinearMapping script, which drives the bow draw animation
 

@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33964727999199522}
   - component: {fileID: 23546425679558898}
   - component: {fileID: 95695052416856516}
+  - component: {fileID: 65351434559442480}
   m_Layer: 0
   m_Name: cutting_board_wood
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1368311360300416}
   m_Mesh: {fileID: 4300000, guid: ddf0dcc19c29942dcb5b493d52ad329a, type: 3}
+--- !u!65 &65351434559442480
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1368311360300416}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6822518, y: 0.043496203, z: 0.43593788}
+  m_Center: {x: 0, y: 0.021748101, z: 0}
 --- !u!95 &95695052416856516
 Animator:
   serializedVersion: 3

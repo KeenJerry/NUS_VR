@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33224180517258874}
   - component: {fileID: 23000745718187910}
   - component: {fileID: 95167290610413006}
+  - component: {fileID: 65452303667064794}
   m_Layer: 0
   m_Name: paprika_yellow
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1480328448981972}
   m_Mesh: {fileID: 4300000, guid: 6e09677cf900c4a259da40a2c9dd3286, type: 3}
+--- !u!65 &65452303667064794
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1480328448981972}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.21756399, y: 0.2775988, z: 0.21756399}
+  m_Center: {x: 0, y: 0.1387994, z: 0}
 --- !u!95 &95167290610413006
 Animator:
   serializedVersion: 3

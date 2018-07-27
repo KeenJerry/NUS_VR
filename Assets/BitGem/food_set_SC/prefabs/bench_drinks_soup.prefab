@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33588371487820588}
   - component: {fileID: 23242128317911906}
   - component: {fileID: 95571971297900536}
+  - component: {fileID: 65435839163854606}
   m_Layer: 0
   m_Name: bench_drinks_soup
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1241410488149142}
   m_Mesh: {fileID: 4300000, guid: fd16375b0af34461abf6907b156fa820, type: 3}
+--- !u!65 &65435839163854606
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241410488149142}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2395964, y: 0.872363, z: 0.84206855}
+  m_Center: {x: -0.0059906244, y: 0.4361815, z: 0.066140726}
 --- !u!95 &95571971297900536
 Animator:
   serializedVersion: 3

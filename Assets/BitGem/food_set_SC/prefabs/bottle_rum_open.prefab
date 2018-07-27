@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33979509588540878}
   - component: {fileID: 23835109538243646}
   - component: {fileID: 95312268748639158}
+  - component: {fileID: 65063577931672494}
   m_Layer: 0
   m_Name: bottle_rum_open
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1031686215176962}
   m_Mesh: {fileID: 4300000, guid: 0bdbd3e835c3f46bbb18d33d1377841e, type: 3}
+--- !u!65 &65063577931672494
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1031686215176962}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3441754, y: 0.5751736, z: 0.3441983}
+  m_Center: {x: 0, y: 0.2875868, z: 0}
 --- !u!95 &95312268748639158
 Animator:
   serializedVersion: 3

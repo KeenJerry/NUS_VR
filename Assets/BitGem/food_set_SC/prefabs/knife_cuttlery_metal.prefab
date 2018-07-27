@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33062617414335970}
   - component: {fileID: 23192744879389524}
   - component: {fileID: 95910834876908206}
+  - component: {fileID: 65309454682099538}
   m_Layer: 0
   m_Name: knife_cuttlery_metal
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1889433075444674}
   m_Mesh: {fileID: 4300000, guid: 07071f0151a7a4b54bfe3d4500cd9e48, type: 3}
+--- !u!65 &65309454682099538
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1889433075444674}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.43253702, y: 0.02354526, z: 0.065255485}
+  m_Center: {x: 0.109561674, y: 0, z: 0.011317745}
 --- !u!95 &95910834876908206
 Animator:
   serializedVersion: 3

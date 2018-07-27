@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33475090895935844}
   - component: {fileID: 23507272973801644}
   - component: {fileID: 95904249367412156}
+  - component: {fileID: 65195972749964438}
   m_Layer: 0
   m_Name: egg_white
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1200976486483594}
   m_Mesh: {fileID: 4300000, guid: ea82d534f66a341d59d6cafe40322723, type: 3}
+--- !u!65 &65195972749964438
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1200976486483594}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.14999999, y: 0.15122598, z: 0.21995866}
+  m_Center: {x: 0, y: 0.072915316, z: 0}
 --- !u!95 &95904249367412156
 Animator:
   serializedVersion: 3

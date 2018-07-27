@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33479748051632968}
   - component: {fileID: 23587755424385640}
   - component: {fileID: 95251428800446794}
+  - component: {fileID: 65799344072359674}
   m_Layer: 0
   m_Name: butter_plate
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1885450201791344}
   m_Mesh: {fileID: 4300000, guid: 670304d30a04d4b61974c17430a96b7e, type: 3}
+--- !u!65 &65799344072359674
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1885450201791344}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.67308384, y: 0.21994048, z: 0.32879424}
+  m_Center: {x: -0.092860214, y: 0.10997024, z: 0}
 --- !u!95 &95251428800446794
 Animator:
   serializedVersion: 3

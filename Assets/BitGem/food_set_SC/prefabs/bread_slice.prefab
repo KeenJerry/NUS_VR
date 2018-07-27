@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33020457202617386}
   - component: {fileID: 23133418478791446}
   - component: {fileID: 95438755443882892}
+  - component: {fileID: 65883095877698640}
   m_Layer: 0
   m_Name: bread_slice
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1238512272435926}
   m_Mesh: {fileID: 4300000, guid: cd016ae357c5b4c39b6bdd5d4b0c1dac, type: 3}
+--- !u!65 &65883095877698640
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1238512272435926}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.17444316, y: 0.054377697, z: 0.2770025}
+  m_Center: {x: -0.08722156, y: 0.027188841, z: 0}
 --- !u!95 &95438755443882892
 Animator:
   serializedVersion: 3

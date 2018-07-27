@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33563051331544728}
   - component: {fileID: 23889878445644388}
   - component: {fileID: 95220187400040992}
+  - component: {fileID: 65265042242156808}
   m_Layer: 0
   m_Name: spoon_cuttlery_wood
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1646870870390496}
   m_Mesh: {fileID: 4300000, guid: 46a06266481474149a9fbf10814d934b, type: 3}
+--- !u!65 &65265042242156808
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1646870870390496}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36825466, y: 0.038790993, z: 0.11768995}
+  m_Center: {x: 0.07629332, y: 9.313226e-10, z: 0.00024154224}
 --- !u!95 &95220187400040992
 Animator:
   serializedVersion: 3

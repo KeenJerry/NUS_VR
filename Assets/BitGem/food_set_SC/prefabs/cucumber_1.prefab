@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33834187383716698}
   - component: {fileID: 23568041023473688}
   - component: {fileID: 95706559816894966}
+  - component: {fileID: 65940759618221066}
   m_Layer: 0
   m_Name: cucumber_1
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1379046129318656}
   m_Mesh: {fileID: 4300000, guid: e79fab1b9576e47b5947227ebae81c8a, type: 3}
+--- !u!65 &65940759618221066
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1379046129318656}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5241039, y: 0.17102495, z: 0.15279263}
+  m_Center: {x: -0.005799666, y: -0.0021765009, z: 0}
 --- !u!95 &95706559816894966
 Animator:
   serializedVersion: 3

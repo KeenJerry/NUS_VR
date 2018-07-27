@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33586717362007568}
   - component: {fileID: 23257277885475094}
   - component: {fileID: 95922131240900568}
+  - component: {fileID: 65291518896838312}
   m_Layer: 0
   m_Name: lemon_slice
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1532385709241800}
   m_Mesh: {fileID: 4300000, guid: 58ec35cdf64b0421692f695c876c3b4f, type: 3}
+--- !u!65 &65291518896838312
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1532385709241800}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15616243, y: 0.026817963, z: 0.15616243}
+  m_Center: {x: 0, y: 4.656613e-10, z: 0}
 --- !u!95 &95922131240900568
 Animator:
   serializedVersion: 3

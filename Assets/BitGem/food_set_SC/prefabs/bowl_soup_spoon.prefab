@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33666194269655534}
   - component: {fileID: 23278331128134524}
   - component: {fileID: 95502604410307318}
+  - component: {fileID: 65122394213562504}
   m_Layer: 0
   m_Name: bowl_soup_spoon
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1526315172123588}
   m_Mesh: {fileID: 4300000, guid: d114066474ea34c3aa232cccee4f889d, type: 3}
+--- !u!65 &65122394213562504
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1526315172123588}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4249814, y: 0.1900344, z: 0.29365233}
+  m_Center: {x: -0.06541856, y: 0.0950172, z: 0}
 --- !u!95 &95502604410307318
 Animator:
   serializedVersion: 3

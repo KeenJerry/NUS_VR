@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33276578463628560}
   - component: {fileID: 23908214457290422}
   - component: {fileID: 95386743021509748}
+  - component: {fileID: 65146764966564058}
   m_Layer: 0
   m_Name: plate_wood_oval
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1979129242183964}
   m_Mesh: {fileID: 4300000, guid: 90b186f7594934d71a3c021e11a197a4, type: 3}
+--- !u!65 &65146764966564058
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1979129242183964}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.75852627, y: 0.06818793, z: 0.5694776}
+  m_Center: {x: 0, y: 0.034093987, z: 0}
 --- !u!95 &95386743021509748
 Animator:
   serializedVersion: 3

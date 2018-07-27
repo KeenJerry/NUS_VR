@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33938999919866362}
   - component: {fileID: 23184748985256798}
   - component: {fileID: 95595321833659564}
+  - component: {fileID: 65598624948577654}
   m_Layer: 0
   m_Name: glass
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1315531824298244}
   m_Mesh: {fileID: 4300000, guid: e4d0925e01ea14b57b0e9c1a0b2f4ae1, type: 3}
+--- !u!65 &65598624948577654
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1315531824298244}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.18346709, y: 0.2584868, z: 0.18362059}
+  m_Center: {x: -0.000000007450581, y: 0.1292434, z: 0}
 --- !u!95 &95595321833659564
 Animator:
   serializedVersion: 3

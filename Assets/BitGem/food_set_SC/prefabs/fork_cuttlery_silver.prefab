@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33097089184794350}
   - component: {fileID: 23301858035969424}
   - component: {fileID: 95840512596530012}
+  - component: {fileID: 65740492879869774}
   m_Layer: 0
   m_Name: fork_cuttlery_silver
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1912516113097470}
   m_Mesh: {fileID: 4300000, guid: de4632a53484c40888f03f63623d9190, type: 3}
+--- !u!65 &65740492879869774
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1912516113097470}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3539092, y: 0.036769763, z: 0.09527105}
+  m_Center: {x: 0.068519145, y: 0, z: 0}
 --- !u!95 &95840512596530012
 Animator:
   serializedVersion: 3

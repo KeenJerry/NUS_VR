@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33634461933680982}
   - component: {fileID: 23161759151148594}
   - component: {fileID: 95026751354699964}
+  - component: {fileID: 65582911079780738}
   m_Layer: 0
   m_Name: cutting_board_wood_cleaver
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1583138679785988}
   m_Mesh: {fileID: 4300000, guid: d5f05e78bb9a040f1b7e6a5fb79ad095, type: 3}
+--- !u!65 &65582911079780738
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1583138679785988}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6822518, y: 0.3669546, z: 0.43593788}
+  m_Center: {x: 0, y: 0.1834773, z: 0}
 --- !u!95 &95026751354699964
 Animator:
   serializedVersion: 3

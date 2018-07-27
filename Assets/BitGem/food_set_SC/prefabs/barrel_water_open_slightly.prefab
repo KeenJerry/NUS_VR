@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33642517781338550}
   - component: {fileID: 23867569082739948}
   - component: {fileID: 95350355408481876}
+  - component: {fileID: 65199384083946284}
   m_Layer: 0
   m_Name: barrel_water_open_slightly
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1454148232805268}
   m_Mesh: {fileID: 4300000, guid: bcd5fc0c97e064913bc705826307f3a0, type: 3}
+--- !u!65 &65199384083946284
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1454148232805268}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1328132, y: 1.1356555, z: 0.9314829}
+  m_Center: {x: 0.10066511, y: 0.56782776, z: 0}
 --- !u!95 &95350355408481876
 Animator:
   serializedVersion: 3

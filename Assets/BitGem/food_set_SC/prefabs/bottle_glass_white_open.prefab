@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33804344946977130}
   - component: {fileID: 23522843227325084}
   - component: {fileID: 95867044897323134}
+  - component: {fileID: 65088279886810918}
   m_Layer: 0
   m_Name: bottle_glass_white_open
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1362200252016948}
   m_Mesh: {fileID: 4300000, guid: c6ad64c8e530d4cba8281b6e3865d8ba, type: 3}
+--- !u!65 &65088279886810918
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1362200252016948}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.24284878, y: 0.5753097, z: 0.24286844}
+  m_Center: {x: 0.0000021345913, y: 0.28765485, z: 0}
 --- !u!95 &95867044897323134
 Animator:
   serializedVersion: 3

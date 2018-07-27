@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33499145244132108}
   - component: {fileID: 23088554860726714}
   - component: {fileID: 95245690960385250}
+  - component: {fileID: 65845000075052204}
   m_Layer: 0
   m_Name: soup_bowl_full_yellow
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1748961984000582}
   m_Mesh: {fileID: 4300000, guid: 4c6ef5e99f7194b4988d38dc953a11c8, type: 3}
+--- !u!65 &65845000075052204
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1748961984000582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.24530151, y: 0.00000020116568, z: 0.24530174}
+  m_Center: {x: 0, y: 0.096563786, z: 0}
 --- !u!95 &95245690960385250
 Animator:
   serializedVersion: 3

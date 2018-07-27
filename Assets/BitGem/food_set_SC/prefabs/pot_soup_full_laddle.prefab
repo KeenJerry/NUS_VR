@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33750467311688208}
   - component: {fileID: 23202498400937832}
   - component: {fileID: 95811753351078710}
+  - component: {fileID: 65372761224855160}
   m_Layer: 0
   m_Name: pot_soup_full_laddle
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1791482392553650}
   m_Mesh: {fileID: 4300000, guid: 9e22ffd3def98461f8abafde37d21488, type: 3}
+--- !u!65 &65372761224855160
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1791482392553650}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6756428, y: 0.41088283, z: 0.54127085}
+  m_Center: {x: -0.0009770393, y: 0.20952168, z: 0.0030041635}
 --- !u!95 &95811753351078710
 Animator:
   serializedVersion: 3

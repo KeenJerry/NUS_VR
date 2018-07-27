@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33722584497844798}
   - component: {fileID: 23892393087854160}
   - component: {fileID: 95821203940150824}
+  - component: {fileID: 65456191952548254}
   m_Layer: 0
   m_Name: plate_chicken_dish
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1798885352906280}
   m_Mesh: {fileID: 4300000, guid: 7680395d62846497a920ac53b1c3abcc, type: 3}
+--- !u!65 &65456191952548254
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1798885352906280}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6953565, y: 0.26231697, z: 0.52616125}
+  m_Center: {x: -0.05653213, y: 0.13115849, z: 0.0045389235}
 --- !u!95 &95821203940150824
 Animator:
   serializedVersion: 3

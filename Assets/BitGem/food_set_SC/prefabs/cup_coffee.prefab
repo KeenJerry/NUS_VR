@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33602989237463884}
   - component: {fileID: 23973400466506286}
   - component: {fileID: 95763001478579716}
+  - component: {fileID: 65180847394643500}
   m_Layer: 0
   m_Name: cup_coffee
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1629021397160936}
   m_Mesh: {fileID: 4300000, guid: 2526515adbdc24a41bd505c9e229a12d, type: 3}
+--- !u!65 &65180847394643500
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1629021397160936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.32884532, y: 0.2352936, z: 0.23128676}
+  m_Center: {x: -0.048779286, y: 0.1176468, z: 0}
 --- !u!95 &95763001478579716
 Animator:
   serializedVersion: 3

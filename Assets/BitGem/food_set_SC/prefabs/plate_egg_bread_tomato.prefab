@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33652391593011156}
   - component: {fileID: 23461064444539178}
   - component: {fileID: 95840245288266776}
+  - component: {fileID: 65423730878781320}
   m_Layer: 0
   m_Name: plate_egg_bread_tomato
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1117295964161232}
   m_Mesh: {fileID: 4300000, guid: b5dca720c4dcb474d9640ec0705775f7, type: 3}
+--- !u!65 &65423730878781320
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1117295964161232}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5170959, y: 0.13469833, z: 0.51709473}
+  m_Center: {x: 0, y: 0.067349166, z: 0}
 --- !u!95 &95840245288266776
 Animator:
   serializedVersion: 3
