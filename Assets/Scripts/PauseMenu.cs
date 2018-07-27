@@ -8,17 +8,11 @@ public class PauseMenu : MonoBehaviour {
     public float speed = 20;
     public float maxDis = 20;
     public float minDis = 15;
-    private Transform camera;
     private bool open = false;
     private Vector3 dir;
 
     public Transform cursor;
     public TextMesh volumnValue;
-
-	// Use this for initialization
-	void Start () {
-        camera = LookAtCamera.camera.transform;
-	}
 
 	// Update is called once per frame
 	void Update () {
@@ -31,12 +25,12 @@ public class PauseMenu : MonoBehaviour {
             else
             {
                 open = true;
-                dir = (location.position - camera.position).normalized;
+                dir = (location.position - LookAtCamera.camera.transform.position).normalized;
                 transform.position = dir * maxDis + location.position;
             }
         }
 
-        float dis = (transform.position - camera.position).magnitude;
+        float dis = (transform.position - LookAtCamera.camera.transform.position).magnitude;
         if (open)
         {
             if (dis > minDis)

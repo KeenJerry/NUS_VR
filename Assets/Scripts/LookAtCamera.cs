@@ -8,7 +8,8 @@ public class LookAtCamera : MonoBehaviour {
     public GameObject vrCamera;
     // Use this for initialization
     void Start () {
-        camera = vrCamera;
+        if (vrCamera != null)
+            camera = vrCamera;
     }
 	
 	// Update is called once per frame
