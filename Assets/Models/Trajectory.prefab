@@ -1759,7 +1759,7 @@ MonoBehaviour:
   scale: 5
   speed: 180
   maxPieceTime: 1
-  iconOffset: {x: -3.5, y: -0.6, z: 0}
+  iconOffset: {x: -4.3, y: -0.6, z: 0}
   onTrigger:
     m_PersistentCalls:
       m_Calls:

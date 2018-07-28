@@ -40,7 +40,6 @@ public class RiseHintController : MonoBehaviour {
 
     public void hint(string content, HintType type, Vector3 pos)
     {
-        Debug.Log(content);
         Color color = new Color(1, 1, 1, 1);
         switch(type)
         {
