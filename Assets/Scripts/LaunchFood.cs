@@ -376,7 +376,7 @@ public class LaunchFood : MonoBehaviour {
                 {
                     statisticsErrorCount++;
                     scoreMultiple = 1;
-                    riseHint.hint("Error!", new Color(1, 0, 0), food.transform.position);
+                    riseHint.hint("Error!", RiseHintController.HintType.ERROR, food.transform.position);
                 }
                 else
                 {
@@ -389,11 +389,11 @@ public class LaunchFood : MonoBehaviour {
                     {
                         levelUpCount = 0;
                         scoreMultiple += 1;
-                        riseHint.hint("Level Up!", new Color(0, 0, 1), food.transform.position);
+                        riseHint.hint("Level Up!", RiseHintController.HintType.GOOD, food.transform.position);
                     }
                     else
                     {
-                        riseHint.hint("Combo X"+levelUpCount, new Color(1, 1, 0), food.transform.position);
+                        riseHint.hint("Combo X"+levelUpCount, RiseHintController.HintType.NORMAL, food.transform.position);
                     }
 
                     checkNum();
@@ -428,7 +428,7 @@ public class LaunchFood : MonoBehaviour {
                 {
                     status = Status.LOSE;
                 }
-                riseHint.hint("Bomb!", new Color(1, 0, 0), bomb.transform.position);
+                riseHint.hint("Bomb!", RiseHintController.HintType.ERROR, bomb.transform.position);
                 break;
             }
     }
