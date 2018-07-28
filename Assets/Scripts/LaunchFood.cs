@@ -327,9 +327,10 @@ public class LaunchFood : MonoBehaviour {
 
     private int inManual(int index)
     {
-        for (int i = 0; i < chosen.foods.Length; i++)
-            if (chosen.foods[i].key == FoodSet.foods[index].key)
-                return i;
+        if(chosen != null)
+            for (int i = 0; i < chosen.foods.Length; i++)
+                if (chosen.foods[i].key == FoodSet.foods[index].key)
+                    return i;
         return -1;
     }
 
