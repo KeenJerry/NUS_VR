@@ -145,7 +145,8 @@ public class LaunchFood : MonoBehaviour {
                                 if (index != -1 && statisticsCount[index] < chosen.nums[index])
                                 {
                                     statisticsMissCount++;
-                                    statisticsScoreCount -= 10;
+                                    if (statisticsScoreCount > 0)
+                                        statisticsScoreCount -= 10;
                                     scoreMultiple = 1;
                                     levelUpCount = 0;
                                     ShowStatisticsInfo();
