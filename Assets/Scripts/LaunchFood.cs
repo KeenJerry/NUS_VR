@@ -313,13 +313,13 @@ public class LaunchFood : MonoBehaviour {
     {
         if (statisticsFoodsObj != null)
         {
-            for (int i = statisticsFoodsObj.Length - 1; i >= 0; i++)
+            for (int i = statisticsFoodsObj.Length - 1; i >= 0; i--)
                 Destroy(statisticsFoodsObj[i]);
             statisticsFoodsObj = null;
         }
         if (statisticsTextsObj != null)
         {
-            for (int i = statisticsTextsObj.Length - 1; i >= 0; i++)
+            for (int i = statisticsTextsObj.Length - 1; i >= 0; i--)
                 Destroy(statisticsTextsObj[i]);
             statisticsTextsObj = null;
         }
