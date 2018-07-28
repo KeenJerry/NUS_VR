@@ -352,7 +352,6 @@ public class LaunchFood : MonoBehaviour {
                 {
                     statisticsErrorCount++;
                     scoreMultiple = 1;
-                    ShowStatisticsInfo();
                 }
                 else
                 {
@@ -371,6 +370,7 @@ public class LaunchFood : MonoBehaviour {
 
                     checkNum();
                 }
+                ShowStatisticsInfo();
 
                 break;
             }
