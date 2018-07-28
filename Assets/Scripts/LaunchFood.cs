@@ -10,6 +10,7 @@ public class LaunchFood : MonoBehaviour {
     private TextMesh[] statisticsCountText = null;
     private int statisticsMissCount;
     private int statisticsErrorCount;
+    private int statisticsScoreCount;
     private enum Status
     {
         FREE, WAITING, PREPARE, LAUNCH, PAUSE, END
@@ -24,6 +25,7 @@ public class LaunchFood : MonoBehaviour {
     private GameObject[] statisticsTextsObj = null;
     public TextMesh statisticsMiss;
     public TextMesh statisticsError;
+    public TextMesh statisticsScore;
 
     public int prepareCount = 3;
     public float launchInterval = 1f;
@@ -135,7 +137,8 @@ public class LaunchFood : MonoBehaviour {
                                 if (inManual(i / poolCap) != -1)
                                 {
                                     statisticsMissCount++;
-                                    statisticsMiss.text = "Miss: " + statisticsMissCount;
+                                    statisticsScoreCount -= 10;
+                                    ShowStatisticsInfo();
                                 }
                             }
                         }
@@ -183,6 +186,13 @@ public class LaunchFood : MonoBehaviour {
                 break;
         }
 	}
+
+    private void ShowStatisticsInfo()
+    {
+        statisticsMiss.text = "Miss: " + statisticsMissCount;
+        statisticsScore.text = "Score: " + statisticsScoreCount;
+        statisticsError.text = "Error: " + statisticsErrorCount;
+    }
 
     private void launchFood()
     {
@@ -304,6 +314,8 @@ public class LaunchFood : MonoBehaviour {
                 {
                     statisticsErrorCount++;
                     statisticsError.text = "Error: " + statisticsErrorCount;
+
+
                 }
                 else
                 {
@@ -317,6 +329,7 @@ public class LaunchFood : MonoBehaviour {
 
     public void cutBomb(GameObject bomb)
     {
+        if (status != Status.LAUNCH) return;
         for (int i = 0; i < poolCap; i++)
             if (bombPool[i] == bomb)
             {
