@@ -19,7 +19,9 @@ public class LaunchFood : MonoBehaviour {
     public Transform foods;
     public Transform pieces;
     public Transform statisticsFoods;
+    private GameObject[] statisticsFoodsObj = null;
     public Transform statisticsText;
+    private GameObject[] statisticsTextsObj = null;
     public TextMesh statisticsMiss;
     public TextMesh statisticsError;
 
@@ -138,6 +140,17 @@ public class LaunchFood : MonoBehaviour {
                             }
                         }
                     }
+                    for (int i = 0; i < poolCap; i++)
+                    {
+                        GameObject bomb = bombPool[i];
+                        if (bomb.activeSelf)
+                        {
+                            bomb.transform.position += new Vector3(0, 0, Time.deltaTime * moveSpeed);
+                            bomb.transform.localEulerAngles += new Vector3(0, Time.deltaTime * rotateSpeed, 0);
+                            if (bomb.transform.localPosition.z > trajectoryLength)
+                                bomb.SetActive(false);
+                        }
+                    }
                     for (int i = 0; i < piecePool.Length; i++)
                         if (piecePool[i].activeSelf)
                         {
@@ -153,8 +166,7 @@ public class LaunchFood : MonoBehaviour {
             case Status.END:
                 foreach (GameObject food in foodPool)
                     food.SetActive(false);
-                clearChildren(statisticsFoods);
-                clearChildren(statisticsText);
+                clearPreviewStatistics();
                 statisticsFoods.gameObject.SetActive(false);
                 statisticsText.gameObject.SetActive(false);
                 statisticsMiss.gameObject.SetActive(false);
@@ -171,13 +183,6 @@ public class LaunchFood : MonoBehaviour {
                 break;
         }
 	}
-
-    private void clearChildren(Transform parent)
-    {
-        GameObject[] children = parent.gameObject.GetComponentsInChildren<GameObject>();
-        foreach (GameObject child in children)
-            Destroy(child);
-    }
 
     private void launchFood()
     {
@@ -210,13 +215,15 @@ public class LaunchFood : MonoBehaviour {
             {
                 chosen = FoodSet.manuals[manualIndex];
 
-                clearChildren(statisticsFoods);
-                clearChildren(statisticsText);
+                clearPreviewStatistics();
+
 
                 // create statistics
                 int count = chosen.foods.Length;
                 statisticsCount = new int[count];
                 statisticsCountText = new TextMesh[count];
+                statisticsFoodsObj = new GameObject[count];
+                statisticsTextsObj = new GameObject[count];
                 for (int i = 0; i < count; i++)
                 {
                     statisticsCount[i] = 0;
@@ -225,12 +232,14 @@ public class LaunchFood : MonoBehaviour {
                     tempFood = Instantiate(chosen.foods[i].obj, statisticsFoods);
                     tempFood.transform.localPosition = offset;
                     tempFood.transform.localScale = new Vector3(5, 5, 5);
+                    statisticsFoodsObj[i] = tempFood;
                     GameObject tempText;
                     tempText = new GameObject();
                     tempText.transform.parent = statisticsText;
                     tempText.transform.localPosition = offset;
                     tempText.transform.localEulerAngles = new Vector3(0, 0, 0);
                     tempText.AddComponent<TextMesh>();
+                    statisticsTextsObj[i] = tempText;
                     statisticsCountText[i] = tempText.GetComponent<TextMesh>();
                     statisticsCountText[i].text = 0 + "/" + chosen.nums[i];
                     statisticsCountText[i].anchor = TextAnchor.MiddleCenter;
@@ -253,6 +262,22 @@ public class LaunchFood : MonoBehaviour {
 
                 status = Status.WAITING;
             }
+    }
+
+    private void clearPreviewStatistics()
+    {
+        if (statisticsFoodsObj != null)
+        {
+            for (int i = statisticsFoodsObj.Length - 1; i >= 0; i++)
+                Destroy(statisticsFoodsObj[i]);
+            statisticsFoodsObj = null;
+        }
+        if (statisticsTextsObj != null)
+        {
+            for (int i = statisticsTextsObj.Length - 1; i >= 0; i++)
+                Destroy(statisticsTextsObj[i]);
+            statisticsTextsObj = null;
+        }
     }
 
     public void cutFood(GameObject food)
@@ -325,5 +350,43 @@ public class LaunchFood : MonoBehaviour {
         status = Status.PREPARE;
         startButtonText.text = "3";
         CuttingHelpController.show = false;
+    }
+
+    
+
+    // test
+    public void CallMenu()
+    {
+        if (status == Status.LAUNCH)
+        {
+            status = Status.PAUSE;
+            CuttingHelpController.show = true;
+        }
+        else if (status == Status.PAUSE)
+        {
+            status = Status.LAUNCH;
+            // hide menu
+            CuttingHelpController.show = false;
+        }
+    }
+
+    public void CutCloseFood()
+    {
+        GameObject close;
+        float dis = 0;
+        for (int i = 0; i < foodPool.Length; i++)
+            if (foodPool[i].activeSelf)
+                if (foodPool[i].transform.position.z > dis)
+                {
+                    close = foodPool[i];
+                    dis = foodPool[i].transform.position.z;
+                }
+        for (int i = 0; i < poolCap; i++)
+            if (bombPool[i].activeSelf)
+                if (bombPool[i].transform.position.z > dis)
+                {
+                    close = bombPool[i];
+                    dis = bombPool[i].transform.position.z;
+                }
     }
 }
