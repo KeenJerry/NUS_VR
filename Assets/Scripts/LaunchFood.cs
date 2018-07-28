@@ -300,6 +300,8 @@ public class LaunchFood : MonoBehaviour {
                 statisticsText.gameObject.SetActive(true);
                 statisticsMiss.gameObject.SetActive(true);
                 statisticsError.gameObject.SetActive(true);
+                statisticsScore.gameObject.SetActive(true);
+                statisticsBomb.gameObject.SetActive(true);
 
                 startButtonText.text = "Start";
                 startButton.SetActive(true);
