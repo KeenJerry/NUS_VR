@@ -246,9 +246,28 @@ public class LaunchFood : MonoBehaviour {
                 for (int j = 0; j < FoodSet.foods.Length; j++)
                     freeFood.Add(bombPool[i]);
 
-        GameObject choice = freeFood[UnityEngine.Random.Range(0, freeFood.Count)];
-        choice.transform.localPosition = new Vector3(UnityEngine.Random.Range(-3, 4), UnityEngine.Random.Range(-3, 4), 0);
-        choice.SetActive(true);
+        int maxLaunch = 3;
+        GameObject[] choiceList = new GameObject[maxLaunch];
+        Vector3[] posList = new Vector3[maxLaunch];
+        for (int i = 0; i < maxLaunch; i++)
+        {
+            choiceList[i] = freeFood[UnityEngine.Random.Range(0, freeFood.Count)];
+            posList[i] = new Vector3(UnityEngine.Random.Range(-3, 4), UnityEngine.Random.Range(-3, 4), 0);
+            choiceList[i].transform.localPosition = posList[i];
+        }
+
+        for (int i = 0; i < maxLaunch; i++) {
+            int j;
+            for (j = 0; j < i; j++)
+            {
+                if (choiceList[j] == choiceList[i]) break;
+                if (posList[i].Equals(posList[j])) break;
+            }
+            if (j == i)
+            {
+                choiceList[i].SetActive(true);
+            }
+        }
     }
 
     public void setManual(int manualIndex)
