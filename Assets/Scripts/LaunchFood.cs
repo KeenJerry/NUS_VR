@@ -179,6 +179,8 @@ public class LaunchFood : MonoBehaviour {
                     food.SetActive(false);
                 foreach (GameObject bomb in bombPool)
                     bomb.SetActive(false);
+                foreach (GameObject piece in piecePool)
+                    piece.SetActive(false);
                 startButtonText.text = "Win!";
                 startButton.GetComponent<FruitButton>().resetIcon();
                 startButton.SetActive(true);
@@ -188,6 +190,8 @@ public class LaunchFood : MonoBehaviour {
                     food.SetActive(false);
                 foreach (GameObject bomb in bombPool)
                     bomb.SetActive(false);
+                foreach (GameObject piece in piecePool)
+                    piece.SetActive(false);
                 startButtonText.text = "Lose!";
                 startButton.GetComponent<FruitButton>().resetIcon();
                 startButton.SetActive(true);
@@ -323,6 +327,7 @@ public class LaunchFood : MonoBehaviour {
     public void cutFood(GameObject food)
     {
         if (status != Status.LAUNCH) return;
+        if (food == null) return;
         for (int i = 0; i < foodPool.Length; i++)
             if (foodPool[i] == food)
             {
@@ -379,14 +384,16 @@ public class LaunchFood : MonoBehaviour {
     public void cutBomb(GameObject bomb)
     {
         if (status != Status.LAUNCH) return;
+        if (bomb == null) return;
         for (int i = 0; i < poolCap; i++)
             if (bombPool[i] == bomb)
             {
+                bomb.SetActive(false);
                 statisticsBombCount++;
                 ShowStatisticsInfo();
                 scoreMultiple = 1;
                 levelUpCount = 0;
-                if(statisticsBombCount >= maxBomb)
+                if (statisticsBombCount >= maxBomb)
                 {
                     status = Status.LOSE;
                 }
@@ -448,7 +455,7 @@ public class LaunchFood : MonoBehaviour {
 
     public void CutCloseFood()
     {
-        GameObject close;
+        GameObject close = null;
         float dis = 0;
         for (int i = 0; i < foodPool.Length; i++)
             if (foodPool[i].activeSelf)
@@ -464,5 +471,7 @@ public class LaunchFood : MonoBehaviour {
                     close = bombPool[i];
                     dis = bombPool[i].transform.position.z;
                 }
+        cutFood(close);
+        cutBomb(close);
     }
 }
