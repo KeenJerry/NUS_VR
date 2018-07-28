@@ -74,7 +74,7 @@ public class LaunchFood : MonoBehaviour {
             {
                 int k = i * pieceEach + j;
                 piecePool[k] = Instantiate(FoodSet.foods[i].piece, pieces);
-                piecePool[k].tag = "untagged";
+                piecePool[k].tag = "Untagged";
                 piecePool[k].SetActive(false);
                 piecePool[k].transform.localScale = new Vector3(3, 3, 3);
             }
