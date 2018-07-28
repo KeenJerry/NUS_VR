@@ -353,10 +353,12 @@ public class LaunchFood : MonoBehaviour {
 
                     statisticsScoreCount += 10 * scoreMultiple;
                     levelUpCount += 1;
+                    Debug.Log(levelUpCount + "/" + scoreMultiple);
                     if (levelUpCount == scoreMultiple)
                     {
                         levelUpCount = 0;
                         scoreMultiple += 1;
+                        Debug.Log("Level Up: " + scoreMultiple);
                     }
 
                     checkNum();

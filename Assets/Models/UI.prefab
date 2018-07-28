@@ -1441,9 +1441,10 @@ TextMesh:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1305004233742580}
   m_Text: "The exciting time is coming!\n\nTry you best to cut the correct kinds\nof
-    food. If you cut the wrong kinds of\nfood more than 3 times, the game is\nover!
-    Missing the correct food will \ndecrease your score.\n\nYou can press the Application
-    Menu\nButton to pause the game and call out\nthe menu.\n\nGood luck!"
+    food, which will bring a higher score \nto you. If you cut the bomb more than\n3
+    times, the game is over! Missing the \ncorrect food will decrease your score.\n\nYou
+    can press the Application Menu\nButton to pause the game and call out\nthe menu.\n\nGood
+    luck!"
   m_OffsetZ: 0
   m_CharacterSize: 0.5
   m_LineSpacing: 1
