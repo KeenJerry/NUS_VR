@@ -55,6 +55,7 @@ public class RiseHintController : MonoBehaviour {
         hints[i].gameObject.transform.position = new Vector3(pos.x, pos.y+1, pos.z);
         hints[i].text = content;
         hints[i].color = color;
+        hints[i].gameObject.SetActive(true);
     }
 
     private void rise(TextMesh obj, float time)
