@@ -249,7 +249,7 @@ public class LaunchFood : MonoBehaviour {
                 for (int j = 0; j < FoodSet.foods.Length; j++)
                     freeFood.Add(bombPool[i]);
 
-        int maxLaunch = 3;
+        int maxLaunch = UnityEngine.Random.Range(0, 4);
         GameObject[] choiceList = new GameObject[maxLaunch];
         int[] posList = new int[maxLaunch];
         for (int i = 0; i < maxLaunch; i++)
