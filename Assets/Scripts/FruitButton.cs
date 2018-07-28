@@ -66,6 +66,7 @@ public class FruitButton : MonoBehaviour {
         for (int i = 0; i < 3; i++)
         {
             piece[i] = Instantiate(FoodSet.foods[iconID].piece, transform);
+            piece[i].tag = "untagged";
             piece[i].transform.localScale = new Vector3(scale * 0.7f, scale * 0.7f, scale * 0.7f);
         }
     }
