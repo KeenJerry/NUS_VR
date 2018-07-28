@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 4920194010823674}
   - component: {fileID: 114035007315267034}
   - component: {fileID: 114540268368671452}
+  - component: {fileID: 114922377318955806}
   m_Layer: 0
   m_Name: CuttingHelp
   m_TagString: Untagged
@@ -1631,8 +1632,8 @@ MonoBehaviour:
   - {fileID: 102423847405000062}
   - {fileID: 102577105025186120}
   objs: []
-  minDis: 15
-  maxDis: 20
+  minDis: 5
+  maxDis: 10
 --- !u!114 &114569322404327276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1701,6 +1702,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vrCamera: {fileID: 0}
+--- !u!114 &114922377318955806
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1235675492499588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e87f3a1e0410a439064196ab6a7bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 40
 --- !u!212 &212394853357236002
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 65710062986732992}
   m_Layer: 0
   m_Name: cutting_board_wood (1)
-  m_TagString: food
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1462,6 +1462,17 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114093360725397544}
+        m_MethodName: resetIcon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114110351022574456}
         m_MethodName: resetIcon
         m_Mode: 1
         m_Arguments:
