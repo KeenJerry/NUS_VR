@@ -26,6 +26,10 @@ public class ShowRegionInfo : MonoBehaviour {
                     {
                         info.SetActive(true);
                     }
+                    foreach (GameObject block in Block)
+                    {
+                        block.SetActive(false);
+                    }
                     return;
                 }
                 if (hand.controller.GetPressUp(Valve.VR.EVRButtonId.k_EButton_SteamVR_Touchpad))
@@ -34,35 +38,9 @@ public class ShowRegionInfo : MonoBehaviour {
                     {
                         info.SetActive(false);
                     }
-                    return;
-                }
-            }
-        }
-
-        for (int i = 0; i < Player.instance.handCount; i++)
-        {
-             Hand hand = Player.instance.GetHand(i);
-
-            if(hand.controller != null)
-            {
-                if (hand.controller.GetPressDown(Valve.VR.EVRButtonId.k_EButton_SteamVR_Touchpad))
-                {
-                   foreach(GameObject block in Block)
-                    {
-                        Color color = block.GetComponent<MeshRenderer>().material.color;
-                        color.a = 0.1f;
-                        block.GetComponent<MeshRenderer>().material.color = color;
-
-                    }
-                    return;
-                }
-                if (hand.controller.GetPressUp(Valve.VR.EVRButtonId.k_EButton_SteamVR_Touchpad))
-                {
                     foreach (GameObject block in Block)
                     {
-                        Color color = block.GetComponent<MeshRenderer>().material.color;
-                        color.a = 1.0f;
-                        block.GetComponent<MeshRenderer>().material.color = color;
+                        block.SetActive(true);
                     }
                     return;
                 }
