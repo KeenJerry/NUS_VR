@@ -42,6 +42,7 @@ public class LaunchFood : MonoBehaviour {
     private Vector3[] pieceVelocity;
     private Vector3 geo = new Vector3(0, -9.8f, 0);
     private int poolCap = 5;
+    private int bombNum = 10;
     private int pieceEach = 3;
 
     public GameObject startButton;
@@ -78,8 +79,8 @@ public class LaunchFood : MonoBehaviour {
                 piecePool[k].SetActive(false);
                 piecePool[k].transform.localScale = new Vector3(3, 3, 3);
             }
-        bombPool = new GameObject[poolCap];
-        for (int i = 0; i < poolCap; i++)
+        bombPool = new GameObject[bombNum];
+        for (int i = 0; i < bombNum; i++)
         {
             bombPool[i] = Instantiate(FoodSet.bomb, foods);
             bombPool[i].SetActive(false);
@@ -152,7 +153,7 @@ public class LaunchFood : MonoBehaviour {
                             }
                         }
                     }
-                    for (int i = 0; i < poolCap; i++)
+                    for (int i = 0; i < bombNum; i++)
                     {
                         GameObject bomb = bombPool[i];
                         if (bomb.activeSelf)
@@ -241,7 +242,7 @@ public class LaunchFood : MonoBehaviour {
                 for (int j = 0; j < dupulicateCount; j++)
                     freeFood.Add(foodPool[i]);
             }
-        for (int i = 0; i < poolCap; i++)
+        for (int i = 0; i < bombNum; i++)
             if (!bombPool[i].activeSelf)
                 for (int j = 0; j < FoodSet.foods.Length; j++)
                     freeFood.Add(bombPool[i]);
@@ -408,7 +409,7 @@ public class LaunchFood : MonoBehaviour {
     {
         if (status != Status.LAUNCH) return;
         if (bomb == null) return;
-        for (int i = 0; i < poolCap; i++)
+        for (int i = 0; i < bombNum; i++)
             if (bombPool[i] == bomb)
             {
                 bomb.SetActive(false);
@@ -487,7 +488,7 @@ public class LaunchFood : MonoBehaviour {
                     close = foodPool[i];
                     dis = foodPool[i].transform.position.z;
                 }
-        for (int i = 0; i < poolCap; i++)
+        for (int i = 0; i < bombNum; i++)
             if (bombPool[i].activeSelf)
                 if (bombPool[i].transform.position.z > dis)
                 {
