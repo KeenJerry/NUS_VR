@@ -1947,6 +1947,9 @@ MonoBehaviour:
   - {fileID: 102536382841498470}
   riseSpeed: 3
   riseLength: 1
+  error: {r: 0.9607844, g: 0, b: 0, a: 1}
+  normal: {r: 0.8679245, g: 0.77967334, b: 0.15966538, a: 1}
+  good: {r: 0.32208967, g: 0.32208967, b: 0.8867924, a: 1}
 --- !u!114 &114954884573009334
 MonoBehaviour:
   m_ObjectHideFlags: 1
