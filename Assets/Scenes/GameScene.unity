@@ -32886,20 +32886,6 @@ Prefab:
       propertyPath: location
       value: 
       objectReference: {fileID: 1742802991}
-    - target: {fileID: 114540268368671452, guid: 7643478928acd834fa9b67ba8ee10071,
-        type: 2}
-      propertyPath: minDis
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114540268368671452, guid: 7643478928acd834fa9b67ba8ee10071,
-        type: 2}
-      propertyPath: maxDis
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4292093032406368, guid: 7643478928acd834fa9b67ba8ee10071, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -1.28
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7643478928acd834fa9b67ba8ee10071, type: 2}
   m_IsPrefabParent: 0

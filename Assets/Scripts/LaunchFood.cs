@@ -48,6 +48,8 @@ public class LaunchFood : MonoBehaviour {
     public GameObject startButton;
     public TextMesh startButtonText;
 
+    public RiseHintController riseHint;
+
     public float statisticsHeight = 11;
     public float moveSpeed = 10;
     public float rotateSpeed = 180;
@@ -374,6 +376,7 @@ public class LaunchFood : MonoBehaviour {
                 {
                     statisticsErrorCount++;
                     scoreMultiple = 1;
+                    riseHint.hint("Error!", new Color(1, 0, 0), food.transform.position);
                 }
                 else
                 {
@@ -382,12 +385,15 @@ public class LaunchFood : MonoBehaviour {
 
                     statisticsScoreCount += 10 * scoreMultiple;
                     levelUpCount += 1;
-                    Debug.Log(levelUpCount + "/" + scoreMultiple);
                     if (levelUpCount == scoreMultiple)
                     {
                         levelUpCount = 0;
                         scoreMultiple += 1;
-                        Debug.Log("Level Up: " + scoreMultiple);
+                        riseHint.hint("Level Up!", new Color(0, 0, 1), food.transform.position);
+                    }
+                    else
+                    {
+                        riseHint.hint("Combo X"+levelUpCount, new Color(1, 1, 0), food.transform.position);
                     }
 
                     checkNum();
@@ -422,6 +428,7 @@ public class LaunchFood : MonoBehaviour {
                 {
                     status = Status.LOSE;
                 }
+                riseHint.hint("Bomb!", new Color(1, 0, 0), bomb.transform.position);
                 break;
             }
     }
