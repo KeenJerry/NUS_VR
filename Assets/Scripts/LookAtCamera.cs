@@ -7,7 +7,7 @@ public class LookAtCamera : MonoBehaviour {
 
     public GameObject vrCamera;
     // Use this for initialization
-    void Start () {
+    void Awake () {
         if (vrCamera != null)
             camera = vrCamera;
     }
