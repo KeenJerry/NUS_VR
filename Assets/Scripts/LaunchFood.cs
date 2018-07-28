@@ -11,9 +11,12 @@ public class LaunchFood : MonoBehaviour {
     private int statisticsMissCount;
     private int statisticsErrorCount;
     private int statisticsScoreCount;
+    private int statisticsBombCount;
+    private int scoreMultiple = 1;
+    private int levelUpCount = 0;
     private enum Status
     {
-        FREE, WAITING, PREPARE, LAUNCH, PAUSE, END
+        FREE, WAITING, PREPARE, LAUNCH, PAUSE, END, WIN, LOSE
     };
     private Status status = Status.FREE;
 
@@ -26,6 +29,7 @@ public class LaunchFood : MonoBehaviour {
     public TextMesh statisticsMiss;
     public TextMesh statisticsError;
     public TextMesh statisticsScore;
+    public TextMesh statisticsBomb;
 
     public int prepareCount = 3;
     public float launchInterval = 1f;
@@ -48,6 +52,7 @@ public class LaunchFood : MonoBehaviour {
     public float rotateSpeed = 180;
     public float trajectoryLength = 64;
     public float potHeight = 0;
+    public int maxBomb = 3;
 
     // Use this for initialization
     void Start () {
@@ -134,10 +139,13 @@ public class LaunchFood : MonoBehaviour {
                             {
                                 food.SetActive(false);
                                 // some punish
-                                if (inManual(i / poolCap) != -1)
+                                int index = inManual(i / poolCap);
+                                if (index != -1 && statisticsCount[index] < chosen.nums[index])
                                 {
                                     statisticsMissCount++;
                                     statisticsScoreCount -= 10;
+                                    scoreMultiple = 1;
+                                    levelUpCount = 0;
                                     ShowStatisticsInfo();
                                 }
                             }
@@ -166,15 +174,34 @@ public class LaunchFood : MonoBehaviour {
                         }
                 }
                 break;
-            case Status.END:
+            case Status.WIN:
                 foreach (GameObject food in foodPool)
                     food.SetActive(false);
+                foreach (GameObject bomb in bombPool)
+                    bomb.SetActive(false);
+                startButtonText.text = "Win!";
+                startButton.GetComponent<FruitButton>().resetIcon();
+                startButton.SetActive(true);
+                break;
+            case Status.LOSE:
+                foreach (GameObject food in foodPool)
+                    food.SetActive(false);
+                foreach (GameObject bomb in bombPool)
+                    bomb.SetActive(false);
+                startButtonText.text = "Lose!";
+                startButton.GetComponent<FruitButton>().resetIcon();
+                startButton.SetActive(true);
+                break;
+            case Status.END:
                 clearPreviewStatistics();
                 statisticsFoods.gameObject.SetActive(false);
                 statisticsText.gameObject.SetActive(false);
                 statisticsMiss.gameObject.SetActive(false);
                 statisticsError.gameObject.SetActive(false);
+                statisticsScore.gameObject.SetActive(false);
+                statisticsBomb.gameObject.SetActive(false);
                 status = Status.FREE;
+                startButton.SetActive(false);
                 break;
             case Status.PAUSE:
                 if (applicationDown())
@@ -192,6 +219,7 @@ public class LaunchFood : MonoBehaviour {
         statisticsMiss.text = "Miss: " + statisticsMissCount;
         statisticsScore.text = "Score: " + statisticsScoreCount;
         statisticsError.text = "Error: " + statisticsErrorCount;
+        statisticsBomb.text = "Bomb: " + statisticsBombCount;
     }
 
     private void launchFood()
@@ -259,14 +287,16 @@ public class LaunchFood : MonoBehaviour {
 
                 statisticsMissCount = 0;
                 statisticsErrorCount = 0;
-                statisticsMiss.text = "Miss: 0";
-                statisticsError.text = "Error: 0";
+                statisticsBombCount = 0;
+                statisticsScoreCount = 0;
+                ShowStatisticsInfo();
 
                 statisticsFoods.gameObject.SetActive(true);
                 statisticsText.gameObject.SetActive(true);
                 statisticsMiss.gameObject.SetActive(true);
                 statisticsError.gameObject.SetActive(true);
 
+                startButtonText.text = "Start";
                 startButton.SetActive(true);
                 CuttingHelpController.show = true;
 
@@ -313,18 +343,35 @@ public class LaunchFood : MonoBehaviour {
                 if (indexInManual == -1)
                 {
                     statisticsErrorCount++;
-                    statisticsError.text = "Error: " + statisticsErrorCount;
-
-
+                    scoreMultiple = 1;
+                    ShowStatisticsInfo();
                 }
                 else
                 {
                     statisticsCount[indexInManual]++;
                     statisticsCountText[indexInManual].text = statisticsCount[indexInManual] + "/" + chosen.nums[indexInManual];
+
+                    statisticsScoreCount += 10 * scoreMultiple;
+                    levelUpCount += 1;
+                    if (levelUpCount == scoreMultiple)
+                    {
+                        levelUpCount = 0;
+                        scoreMultiple += 1;
+                    }
+
+                    checkNum();
                 }
 
                 break;
             }
+    }
+
+    private void checkNum()
+    {
+        for (int i = 0; i < chosen.foods.Length; i++)
+            if (statisticsCount[i] < chosen.nums[i]) return;
+
+        status = Status.WIN;
     }
 
     public void cutBomb(GameObject bomb)
@@ -333,17 +380,23 @@ public class LaunchFood : MonoBehaviour {
         for (int i = 0; i < poolCap; i++)
             if (bombPool[i] == bomb)
             {
-                status = Status.END;
+                statisticsBombCount++;
+                ShowStatisticsInfo();
+                scoreMultiple = 1;
+                levelUpCount = 0;
+                if(statisticsBombCount >= maxBomb)
+                {
+                    status = Status.LOSE;
+                }
                 break;
             }
     }
 
     private int inManual(int index)
     {
-        if(chosen != null)
-            for (int i = 0; i < chosen.foods.Length; i++)
-                if (chosen.foods[i].key == FoodSet.foods[index].key)
-                    return i;
+        for (int i = 0; i < chosen.foods.Length; i++)
+            if (chosen.foods[i].key == FoodSet.foods[index].key)
+                return i;
         return -1;
     }
 
@@ -361,9 +414,16 @@ public class LaunchFood : MonoBehaviour {
 
     public void StartGame()
     {
-        status = Status.PREPARE;
-        startButtonText.text = "3";
-        CuttingHelpController.show = false;
+        if (status == Status.WAITING)
+        {
+            status = Status.PREPARE;
+            startButtonText.text = "3";
+            CuttingHelpController.show = false;
+        }
+        else if (status == Status.WIN || status == Status.LOSE)
+        {
+            status = Status.END;
+        }
     }
 
     
