@@ -14,11 +14,11 @@ public class LaunchFood : MonoBehaviour {
     private int statisticsBombCount;
     private int scoreMultiple = 1;
     private int levelUpCount = 0;
-    private enum Status
+    public enum Status
     {
         FREE, WAITING, PREPARE, LAUNCH, PAUSE, END, WIN, LOSE
     };
-    private Status status = Status.FREE;
+    public Status status = Status.FREE;
 
     public Transform foods;
     public Transform pieces;

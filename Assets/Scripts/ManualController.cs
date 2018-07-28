@@ -61,6 +61,11 @@ public class ManualController : MonoBehaviour {
             SetOpacity(num, opacity);
             SetOpacity(page, opacity);
         }
+
+        if (launcher.status == LaunchFood.Status.END)
+        {
+            resetButton.Invoke();
+        }
 	}
 
     private void SetOpacity(TextMesh text, float opacity)
