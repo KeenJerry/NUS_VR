@@ -29410,6 +29410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1565970526}
   - component: {fileID: 1565970525}
+  - component: {fileID: 1565970527}
   m_Layer: 0
   m_Name: KeyboardController
   m_TagString: Untagged
@@ -29537,6 +29538,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1565970527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1565970524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85328f5efe11d0544b58547b99bd2aab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vrCamera: {fileID: 1239583437}
 --- !u!4 &1566051492 stripped
 Transform:
   m_PrefabParentObject: {fileID: 456684, guid: 4833775757fa3f945996f889e2834cfd, type: 2}
