@@ -105,7 +105,7 @@ public class LaunchFood : MonoBehaviour {
                     {
                         Debug.Log(second);
                         // show count
-                        startButtonText.text = "" + (4 - second);
+                        startButtonText.text = "" + (3 - second);
                     }
                     if (second == prepareCount)
                     {
