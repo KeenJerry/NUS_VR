@@ -6,6 +6,8 @@ public class Cut : MonoBehaviour {
 
     // Use this for initialization
     private GameObject Trajectory;
+    public AudioSource CutAudio;
+    public AudioSource BombAudio;
 	void Start () {
         Trajectory = GameObject.Find("Trajectory");
 	}
@@ -16,11 +18,17 @@ public class Cut : MonoBehaviour {
         {   
             if(Trajectory)
                 Trajectory.GetComponent<LaunchFood>().cutFood(other.gameObject);
+            // music
+            if(CutAudio)
+                CutAudio.Play();
         }
-        if (other.CompareTag("food"))
+        if (other.CompareTag("bomb"))
         {
             if (Trajectory)
                 Trajectory.GetComponent<LaunchFood>().cutBomb(other.gameObject);
+            // music
+            if (BombAudio)
+                BombAudio.Play();
         }
     }
 }
