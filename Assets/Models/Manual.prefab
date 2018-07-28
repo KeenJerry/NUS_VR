@@ -144,7 +144,6 @@ GameObject:
   - component: {fileID: 4313894547712474}
   - component: {fileID: 23923484138096808}
   - component: {fileID: 102356047034469652}
-  - component: {fileID: 114956743575028894}
   - component: {fileID: 114110351022574456}
   m_Layer: 0
   m_Name: Confirm
@@ -209,7 +208,6 @@ GameObject:
   - component: {fileID: 4926763741133472}
   - component: {fileID: 23757827246716252}
   - component: {fileID: 102561070407015968}
-  - component: {fileID: 114935143840485636}
   - component: {fileID: 114093360725397544}
   m_Layer: 0
   m_Name: Next
@@ -456,7 +454,7 @@ Transform:
   m_GameObject: {fileID: 1806698318439542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 4.68, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children: []
   m_Father: {fileID: 4650538136241222}
   m_RootOrder: 0
@@ -1460,7 +1458,7 @@ MonoBehaviour:
   page: {fileID: 102314700480614192}
   foods: {fileID: 4484785950501856}
   texts: {fileID: 4790474671344360}
-  showWidth: 10
+  showWidth: 15
   launcher: {fileID: 0}
   resetButton:
     m_PersistentCalls:
@@ -1490,29 +1488,3 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   switchInterval: 2
---- !u!114 &114935143840485636
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1669798862129794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6662ac804e1017747a6e0fcc38d6bd05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 114307130775778530}
-  bg: {fileID: 0}
---- !u!114 &114956743575028894
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1464087845192976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ac9fa4c7de838d46989078af4defaa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 114307130775778530}
-  bg: {fileID: 0}
