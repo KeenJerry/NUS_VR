@@ -304,6 +304,7 @@ public class LaunchFood : MonoBehaviour {
                 statisticsBomb.gameObject.SetActive(true);
 
                 startButtonText.text = "Start";
+                startButton.GetComponent<FruitButton>().resetIcon();
                 startButton.SetActive(true);
                 CuttingHelpController.show = true;
 
