@@ -6,7 +6,7 @@ public class CuttingHelpController : MonoBehaviour {
     static public bool show = false;
     public float speed = 40;
     private float cuttingHelpHide = -93;
-    private float cuttingHelpShow = -69;
+    private float cuttingHelpShow = -75;
     private Vector3 dir = new Vector3(1, 0, 0);
 	
 	// Update is called once per frame
