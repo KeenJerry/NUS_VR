@@ -49,15 +49,20 @@ public class ShowRegionInfo : MonoBehaviour {
                 {
                    foreach(GameObject block in Block)
                     {
-                        
+                        Color color = block.GetComponent<MeshRenderer>().material.color;
+                        color.a = 0.1f;
+                        block.GetComponent<MeshRenderer>().material.color = color;
+
                     }
                     return;
                 }
                 if (hand.controller.GetPressUp(Valve.VR.EVRButtonId.k_EButton_SteamVR_Touchpad))
                 {
-                    foreach (GameObject info in Info)
+                    foreach (GameObject block in Block)
                     {
-                        info.SetActive(false);
+                        Color color = block.GetComponent<MeshRenderer>().material.color;
+                        color.a = 1.0f;
+                        block.GetComponent<MeshRenderer>().material.color = color;
                     }
                     return;
                 }
