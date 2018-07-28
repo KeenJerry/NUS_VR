@@ -19,7 +19,6 @@ public class FruitButton : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         if (iconID < 0 || iconID >= FoodSet.foods.Length) iconID = 0;
-        createIcon();
         resetIcon();
 	}
 	
@@ -73,6 +72,7 @@ public class FruitButton : MonoBehaviour {
 
     public void resetIcon()
     {
+        if (icon == null) createIcon();
         icon.SetActive(true);
         for (int i = 0; i < 3; i++) piece[i].SetActive(false);
     }
