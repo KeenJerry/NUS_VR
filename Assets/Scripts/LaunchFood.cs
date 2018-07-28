@@ -251,12 +251,11 @@ public class LaunchFood : MonoBehaviour {
 
         int maxLaunch = 3;
         GameObject[] choiceList = new GameObject[maxLaunch];
-        Vector3[] posList = new Vector3[maxLaunch];
+        int[] posList = new int[maxLaunch];
         for (int i = 0; i < maxLaunch; i++)
         {
             choiceList[i] = freeFood[UnityEngine.Random.Range(0, freeFood.Count)];
-            posList[i] = new Vector3(UnityEngine.Random.Range(-1, 2), UnityEngine.Random.Range(-1, 2), 0) * 3;
-            choiceList[i].transform.localPosition = posList[i];
+            posList[i] = UnityEngine.Random.Range(0, 9);
         }
 
         for (int i = 0; i < maxLaunch; i++) {
@@ -264,10 +263,11 @@ public class LaunchFood : MonoBehaviour {
             for (j = 0; j < i; j++)
             {
                 if (choiceList[j] == choiceList[i]) break;
-                if (posList[i].Equals(posList[j])) break;
+                if (posList[i] == posList[j]) break;
             }
             if (j == i)
             {
+                choiceList[i].transform.localPosition = new Vector3(posList[i] % 3 - 1, posList[i] / 3 - 1, 0) * 3;
                 choiceList[i].SetActive(true);
             }
         }
