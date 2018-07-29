@@ -30,17 +30,43 @@ public class BGMManager : MonoBehaviour {
             switch (LaunchFoodComponent.status)
             {
                 case LaunchFood.Status.FREE:
-                    if(BGMNotStart) BGMNotStart.Play();
-                    break;
+                    {
+                        BGMStart.Stop();
+                        if (BGMNotStart)
+                        {
+                            if (!BGMNotStart.isPlaying)
+                            {
+                                BGMNotStart.Play();
+                            }
+                        }
+                        break;
+                    }
+                    
                 case LaunchFood.Status.LAUNCH:
-                    if (BGMStart) BGMStart.Play();
-                    break;
+                    {
+                        if (BGMStart)
+                        {
+                            BGMNotStart.Stop();
+                            if (!BGMStart.isPlaying)
+                            {
+                                BGMStart.Play();
+                            }
+                        }
+                            break;
+                    }
+                    
                 case LaunchFood.Status.LOSE:
-                    if (BGMLose) BGMLose.Play();
-                    break;
+                    {
+                        if (BGMLose) BGMLose.Play();
+                        break;
+                    }
+                    
                 case LaunchFood.Status.WIN:
-                    if (BGMWin) BGMWin.Play();
-                    break;
+                    {
+                        if (BGMWin) BGMWin.Play();
+                        break;
+                    }
+                   
             }
 	}
 }
