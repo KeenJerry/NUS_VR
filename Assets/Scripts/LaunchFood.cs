@@ -6,7 +6,6 @@ using Valve.VR.InteractionSystem;
 
 public class LaunchFood : MonoBehaviour {
     private FoodSet.Manual chosen = null;
-    private int manualIndex;
     private int[] statisticsCount = null;
     private TextMesh[] statisticsCountText = null;
     private int statisticsMissCount;
@@ -210,6 +209,8 @@ public class LaunchFood : MonoBehaviour {
                 statisticsError.gameObject.SetActive(false);
                 statisticsScore.gameObject.SetActive(false);
                 statisticsBomb.gameObject.SetActive(false);
+                status = Status.FREE;
+                startButton.SetActive(false);
                 break;
             case Status.PAUSE:
                 if (applicationDown())
@@ -246,16 +247,17 @@ public class LaunchFood : MonoBehaviour {
             }
         for (int i = 0; i < bombNum; i++)
             if (!bombPool[i].activeSelf)
-                for (int j = 0; j < FoodSet.foods.Length / 2; j++)
+                for (int j = 0; j < FoodSet.foods.Length; j++)
                     freeFood.Add(bombPool[i]);
 
-        int maxLaunch = (int)System.Math.Log(UnityEngine.Random.Range(1, 16), 2);
+        int maxLaunch = 3;
         GameObject[] choiceList = new GameObject[maxLaunch];
-        int[] posList = new int[maxLaunch];
+        Vector3[] posList = new Vector3[maxLaunch];
         for (int i = 0; i < maxLaunch; i++)
         {
             choiceList[i] = freeFood[UnityEngine.Random.Range(0, freeFood.Count)];
-            posList[i] = UnityEngine.Random.Range(0, 9);
+            posList[i] = new Vector3(UnityEngine.Random.Range(-1, 2), UnityEngine.Random.Range(-1, 2), 0) * 3;
+            choiceList[i].transform.localPosition = posList[i];
         }
 
         for (int i = 0; i < maxLaunch; i++) {
@@ -263,11 +265,10 @@ public class LaunchFood : MonoBehaviour {
             for (j = 0; j < i; j++)
             {
                 if (choiceList[j] == choiceList[i]) break;
-                if (posList[i] == posList[j]) break;
+                if (posList[i].Equals(posList[j])) break;
             }
             if (j == i)
             {
-                choiceList[i].transform.localPosition = new Vector3(posList[i] % 3 - 1, posList[i] / 3 - 1, 0) * 3;
                 choiceList[i].SetActive(true);
             }
         }
@@ -279,7 +280,6 @@ public class LaunchFood : MonoBehaviour {
             if (manualIndex >= 0 && manualIndex < FoodSet.manuals.Length)
             {
                 chosen = FoodSet.manuals[manualIndex];
-                this.manualIndex = manualIndex;
 
                 clearPreviewStatistics();
 
@@ -464,18 +464,6 @@ public class LaunchFood : MonoBehaviour {
         else if (status == Status.WIN || status == Status.LOSE)
         {
             status = Status.END;
-            startButtonText.text = "Restart";
-            startButton.GetComponent<FruitButton>().resetIcon();
-        }
-        else if (status == Status.END)
-        {
-            status = Status.WAITING;
-            setManual(manualIndex);
-            status = Status.PREPARE;
-            startButtonText.text = "3";
-            bufferTime = 0;
-            second = 0;
-            CuttingHelpController.show = false;
         }
     }
 
