@@ -275,6 +275,12 @@ public class LaunchFood : MonoBehaviour {
 
     public void setManual(int manualIndex)
     {
+        if (status == Status.END)
+        {
+            status = Status.FREE;
+            bufferTime = 0;
+            second = 0;
+        }
         if (status == Status.FREE || status == Status.WAITING)
             if (manualIndex >= 0 && manualIndex < FoodSet.manuals.Length)
             {
@@ -376,6 +382,7 @@ public class LaunchFood : MonoBehaviour {
                 {
                     statisticsErrorCount++;
                     scoreMultiple = 1;
+                    levelUpCount = 0;
                     riseHint.hint("Error!", RiseHintController.HintType.ERROR, food.transform.position);
                 }
                 else
