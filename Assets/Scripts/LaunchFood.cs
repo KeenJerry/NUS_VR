@@ -6,7 +6,7 @@ using Valve.VR.InteractionSystem;
 
 public class LaunchFood : MonoBehaviour {
     private FoodSet.Manual chosen = null;
-    private int chosenIndex = -1;
+    private int manualIndex;
     private int[] statisticsCount = null;
     private TextMesh[] statisticsCountText = null;
     private int statisticsMissCount;
@@ -246,17 +246,16 @@ public class LaunchFood : MonoBehaviour {
             }
         for (int i = 0; i < bombNum; i++)
             if (!bombPool[i].activeSelf)
-                for (int j = 0; j < FoodSet.foods.Length; j++)
+                for (int j = 0; j < FoodSet.foods.Length / 2; j++)
                     freeFood.Add(bombPool[i]);
 
-        int maxLaunch = 3;
+        int maxLaunch = (int)System.Math.Log(UnityEngine.Random.Range(1, 16), 2);
         GameObject[] choiceList = new GameObject[maxLaunch];
-        Vector3[] posList = new Vector3[maxLaunch];
+        int[] posList = new int[maxLaunch];
         for (int i = 0; i < maxLaunch; i++)
         {
             choiceList[i] = freeFood[UnityEngine.Random.Range(0, freeFood.Count)];
-            posList[i] = new Vector3(UnityEngine.Random.Range(-1, 2), UnityEngine.Random.Range(-1, 2), 0) * 3;
-            choiceList[i].transform.localPosition = posList[i];
+            posList[i] = UnityEngine.Random.Range(0, 9);
         }
 
         for (int i = 0; i < maxLaunch; i++) {
@@ -264,10 +263,11 @@ public class LaunchFood : MonoBehaviour {
             for (j = 0; j < i; j++)
             {
                 if (choiceList[j] == choiceList[i]) break;
-                if (posList[i].Equals(posList[j])) break;
+                if (posList[i] == posList[j]) break;
             }
             if (j == i)
             {
+                choiceList[i].transform.localPosition = new Vector3(posList[i] % 3 - 1, posList[i] / 3 - 1, 0) * 3;
                 choiceList[i].SetActive(true);
             }
         }
@@ -275,17 +275,11 @@ public class LaunchFood : MonoBehaviour {
 
     public void setManual(int manualIndex)
     {
-        if (status == Status.END)
-        {
-            status = Status.FREE;
-            bufferTime = 0;
-            second = 0;
-        }
         if (status == Status.FREE || status == Status.WAITING)
             if (manualIndex >= 0 && manualIndex < FoodSet.manuals.Length)
             {
                 chosen = FoodSet.manuals[manualIndex];
-                chosenIndex = manualIndex;
+                this.manualIndex = manualIndex;
 
                 clearPreviewStatistics();
 
@@ -382,7 +376,6 @@ public class LaunchFood : MonoBehaviour {
                 {
                     statisticsErrorCount++;
                     scoreMultiple = 1;
-                    levelUpCount = 0;
                     riseHint.hint("Error!", RiseHintController.HintType.ERROR, food.transform.position);
                 }
                 else
@@ -477,11 +470,11 @@ public class LaunchFood : MonoBehaviour {
         else if (status == Status.END)
         {
             status = Status.WAITING;
-            this.setManual(chosenIndex);
+            setManual(manualIndex);
             status = Status.PREPARE;
+            startButtonText.text = "3";
             bufferTime = 0;
             second = 0;
-            startButtonText.text = "3";
             CuttingHelpController.show = false;
         }
     }
