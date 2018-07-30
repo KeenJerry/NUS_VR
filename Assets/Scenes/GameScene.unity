@@ -11159,8 +11159,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b04fe576354d04883ce7028059cfdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BGMNotStart: {fileID: 713258452}
-  BGMStart: {fileID: 713258450}
+  BGMNotStart: {fileID: 713258450}
+  BGMStart: {fileID: 713258452}
   BGMWin: {fileID: 713258454}
   BGMLose: {fileID: 713258453}
   Trajetory: {fileID: 1535377344}
