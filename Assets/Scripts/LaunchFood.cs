@@ -6,6 +6,7 @@ using Valve.VR.InteractionSystem;
 
 public class LaunchFood : MonoBehaviour {
     private FoodSet.Manual chosen = null;
+    private int chosenIndex = -1;
     private int[] statisticsCount = null;
     private TextMesh[] statisticsCountText = null;
     private int statisticsMissCount;
@@ -209,8 +210,6 @@ public class LaunchFood : MonoBehaviour {
                 statisticsError.gameObject.SetActive(false);
                 statisticsScore.gameObject.SetActive(false);
                 statisticsBomb.gameObject.SetActive(false);
-                status = Status.FREE;
-                startButton.SetActive(false);
                 break;
             case Status.PAUSE:
                 if (applicationDown())
@@ -280,6 +279,7 @@ public class LaunchFood : MonoBehaviour {
             if (manualIndex >= 0 && manualIndex < FoodSet.manuals.Length)
             {
                 chosen = FoodSet.manuals[manualIndex];
+                chosenIndex = manualIndex;
 
                 clearPreviewStatistics();
 
@@ -464,6 +464,18 @@ public class LaunchFood : MonoBehaviour {
         else if (status == Status.WIN || status == Status.LOSE)
         {
             status = Status.END;
+            startButtonText.text = "Restart";
+            startButton.GetComponent<FruitButton>().resetIcon();
+        }
+        else if (status == Status.END)
+        {
+            status = Status.WAITING;
+            this.setManual(chosenIndex);
+            status = Status.PREPARE;
+            bufferTime = 0;
+            second = 0;
+            startButtonText.text = "3";
+            CuttingHelpController.show = false;
         }
     }
 
