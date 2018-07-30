@@ -275,8 +275,12 @@ public class LaunchFood : MonoBehaviour {
 
     public void setManual(int manualIndex)
     {
+        Debug.Log("Choose");
         if (status == Status.END)
+        {
+            Debug.Log("END");
             status = Status.FREE;
+        }
 
         if (status == Status.FREE || status == Status.WAITING)
             if (manualIndex >= 0 && manualIndex < FoodSet.manuals.Length)
@@ -331,9 +335,12 @@ public class LaunchFood : MonoBehaviour {
 
                 if (status == Status.FREE)
                 {
+                    Debug.Log("Start");
                     startButtonText.text = "Start";
                     startButton.GetComponent<FruitButton>().resetIcon();
                     startButton.SetActive(true);
+                    bufferTime = 0;
+                    second = 0;
                     CuttingHelpController.show = true;
                 }
 

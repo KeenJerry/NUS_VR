@@ -143,7 +143,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1786127977677216}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.1, y: 1.78, z: 2.68}
@@ -343,6 +343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CutAudio: {fileID: 82901478170762780}
   BombAudio: {fileID: 82814557064438662}
+  PoolManager: {fileID: 0}
 --- !u!114 &114737552365439958
 MonoBehaviour:
   m_ObjectHideFlags: 1
