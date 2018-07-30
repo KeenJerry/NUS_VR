@@ -389,6 +389,7 @@ public class LaunchFood : MonoBehaviour {
                 {
                     statisticsErrorCount++;
                     scoreMultiple = 1;
+                    levelUpCount = 0;
                     riseHint.hint("Error!", RiseHintController.HintType.ERROR, food.transform.position);
                 }
                 else
