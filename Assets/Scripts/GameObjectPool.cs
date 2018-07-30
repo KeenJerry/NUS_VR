@@ -6,7 +6,7 @@ public class GameObjectPool : MonoBehaviour
 {
 
     // Use this for initialization
-    public int MaxNum = 10;
+    public int MaxNum = 100;
     public GameObject Prototype;
     private int LeftNum;
     public List<GameObject> GameObjectList;
