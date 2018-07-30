@@ -403,7 +403,7 @@ public class LaunchFood : MonoBehaviour {
                     {
                         levelUpCount = 0;
                         scoreMultiple += 1;
-                        riseHint.hint("Level Up!", RiseHintController.HintType.GOOD, food.transform.position);
+                        riseHint.hint("Level " + scoreMultiple, RiseHintController.HintType.GOOD, food.transform.position);
                     }
                     else
                     {
