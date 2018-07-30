@@ -35,6 +35,8 @@ public class BGMManager : MonoBehaviour {
                 case LaunchFood.Status.FREE:
                     {
                         BGMStart.Stop();
+                        BGMWin.Stop();
+                        BGMLose.Stop();
                         if (BGMNotStart)
                         {
                             if (!BGMNotStart.isPlaying)
