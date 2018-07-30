@@ -275,6 +275,9 @@ public class LaunchFood : MonoBehaviour {
 
     public void setManual(int manualIndex)
     {
+        if (status == Status.END)
+            status = Status.FREE;
+
         if (status == Status.FREE || status == Status.WAITING)
             if (manualIndex >= 0 && manualIndex < FoodSet.manuals.Length)
             {
@@ -326,10 +329,13 @@ public class LaunchFood : MonoBehaviour {
                 statisticsScore.gameObject.SetActive(true);
                 statisticsBomb.gameObject.SetActive(true);
 
-                startButtonText.text = "Start";
-                startButton.GetComponent<FruitButton>().resetIcon();
-                startButton.SetActive(true);
-                CuttingHelpController.show = true;
+                if (status == Status.FREE)
+                {
+                    startButtonText.text = "Start";
+                    startButton.GetComponent<FruitButton>().resetIcon();
+                    startButton.SetActive(true);
+                    CuttingHelpController.show = true;
+                }
 
                 status = Status.WAITING;
             }
