@@ -15,6 +15,8 @@ public class PauseMenu : MonoBehaviour {
     public TextMesh volumnValue;
     public AudioSource[] audios;
 
+    static public float volumn = 1;
+
 	// Update is called once per frame
 	void Update () {
         if (applicationDown())
@@ -59,6 +61,7 @@ public class PauseMenu : MonoBehaviour {
                 else volumn = 140 - volumn;
                 volumnValue.text = "" + volumn;
 
+                PauseMenu.volumn = volumn;
                 foreach (AudioSource audio in audios)
                     audio.volume = volumn / 100.0f;
             }

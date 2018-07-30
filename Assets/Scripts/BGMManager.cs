@@ -21,12 +21,15 @@ public class BGMManager : MonoBehaviour {
 
 	void Start () {
         LaunchFoodComponent = Trajetory.GetComponent<LaunchFood>();
- 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if(LaunchFoodComponent)
+        if (BGMNotStart != null) BGMNotStart.volume = PauseMenu.volumn;
+        if (BGMStart != null) BGMStart.volume = PauseMenu.volumn;
+        if (BGMWin != null) BGMWin.volume = PauseMenu.volumn;
+        if (BGMLose != null) BGMLose.volume = PauseMenu.volumn;
+        if (LaunchFoodComponent)
             switch (LaunchFoodComponent.status)
             {
                 case LaunchFood.Status.FREE:

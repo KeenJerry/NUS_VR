@@ -11136,8 +11136,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 713258451}
-  - component: {fileID: 713258450}
   - component: {fileID: 713258452}
+  - component: {fileID: 713258450}
   - component: {fileID: 713258449}
   m_Layer: 0
   m_Name: BGMManager
@@ -33330,7 +33330,7 @@ Prefab:
     - target: {fileID: 114298228420402348, guid: 7643478928acd834fa9b67ba8ee10071,
         type: 2}
       propertyPath: audios.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4421750543200512, guid: 7643478928acd834fa9b67ba8ee10071, type: 2}
       propertyPath: m_LocalPosition.x
@@ -33373,37 +33373,42 @@ Prefab:
         type: 2}
       propertyPath: audios.Array.data[0]
       value: 
-      objectReference: {fileID: 713258450}
-    - target: {fileID: 114298228420402348, guid: 7643478928acd834fa9b67ba8ee10071,
-        type: 2}
-      propertyPath: audios.Array.data[1]
-      value: 
       objectReference: {fileID: 82984405200841752, guid: d694853506af9e446b1c03d7a683cd8b,
         type: 2}
     - target: {fileID: 114298228420402348, guid: 7643478928acd834fa9b67ba8ee10071,
         type: 2}
-      propertyPath: audios.Array.data[2]
+      propertyPath: audios.Array.data[1]
       value: 
       objectReference: {fileID: 82006212623727108, guid: f320383c3f842194d9a68ed02204501c,
         type: 2}
     - target: {fileID: 114298228420402348, guid: 7643478928acd834fa9b67ba8ee10071,
         type: 2}
-      propertyPath: audios.Array.data[3]
+      propertyPath: audios.Array.data[2]
       value: 
       objectReference: {fileID: 82901478170762780, guid: a90e6c31cf1c4614baf6c366cd134082,
         type: 2}
     - target: {fileID: 114298228420402348, guid: 7643478928acd834fa9b67ba8ee10071,
         type: 2}
-      propertyPath: audios.Array.data[4]
+      propertyPath: audios.Array.data[3]
       value: 
       objectReference: {fileID: 82950247822881550, guid: ced9e80f10263004d99203849ea521e2,
         type: 2}
     - target: {fileID: 114298228420402348, guid: 7643478928acd834fa9b67ba8ee10071,
         type: 2}
-      propertyPath: audios.Array.data[5]
+      propertyPath: audios.Array.data[4]
       value: 
       objectReference: {fileID: 82378776944010860, guid: 81fc1450441aca64e8cc1a0e14b1aa77,
         type: 2}
+    - target: {fileID: 114298228420402348, guid: 7643478928acd834fa9b67ba8ee10071,
+        type: 2}
+      propertyPath: audios.Array.data[5]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114298228420402348, guid: 7643478928acd834fa9b67ba8ee10071,
+        type: 2}
+      propertyPath: audios.Array.data[6]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7643478928acd834fa9b67ba8ee10071, type: 2}
   m_IsPrefabParent: 0
