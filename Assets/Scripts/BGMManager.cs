@@ -55,18 +55,28 @@ public class BGMManager : MonoBehaviour {
                                 BGMStart.Play();
                             }
                         }
-                            break;
+                        break;
                     }
                     
                 case LaunchFood.Status.LOSE:
                     {
-                        if (BGMLose) BGMLose.Play();
+                        if (BGMLose)
+                        {
+                            BGMStart.Stop();
+                            if (!BGMLose.isPlaying)
+                                BGMLose.Play();
+                        }
                         break;
                     }
                     
                 case LaunchFood.Status.WIN:
                     {
-                        if (BGMWin) BGMWin.Play();
+                        if (BGMWin)
+                        {
+                            BGMStart.Stop();
+                            if (!BGMWin.isPlaying)
+                                BGMWin.Play();
+                        }
                         break;
                     }
                    
