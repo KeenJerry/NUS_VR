@@ -16,6 +16,7 @@ public class FruitButton : MonoBehaviour {
     private float[] pieceTime;
     private Vector3[] pieceVelocity;
     private Vector3 geo = new Vector3(0, -9.8f, 0);
+    private bool resetFlag = false;
 	// Use this for initialization
 	void Start () {
         if (iconID < 0 || iconID >= FoodSet.foods.Length) iconID = 0;
@@ -23,7 +24,16 @@ public class FruitButton : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
+        if (icon == null) createIcon();
+        if (!piece[0].activeSelf && resetFlag)
+        {
+            icon.SetActive(true);
+            for (int i = 0; i < 3; i++) piece[i].SetActive(false);
+            resetFlag = false;
+        }
+
         if (icon.activeSelf)
             icon.transform.localEulerAngles += new Vector3(0, speed * Time.deltaTime, 0);
 
@@ -73,7 +83,6 @@ public class FruitButton : MonoBehaviour {
     public void resetIcon()
     {
         if (icon == null) createIcon();
-        icon.SetActive(true);
-        for (int i = 0; i < 3; i++) piece[i].SetActive(false);
+        resetFlag = true;
     }
 }

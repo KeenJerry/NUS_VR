@@ -8,7 +8,12 @@ public class Cut : MonoBehaviour {
     private GameObject Trajectory;
     public AudioSource CutAudio;
     public AudioSource BombAudio;
+    public GameObject PoolManager;
+    private GameObjectPool Pool;
+    // public GameObject ExplodeInstance;
 	void Start () {
+        PoolManager = GameObject.FindGameObjectWithTag("pool");
+        Pool = PoolManager.GetComponent<GameObjectPool>();
         Trajectory = GameObject.Find("Trajectory");
 	}
 
@@ -20,7 +25,7 @@ public class Cut : MonoBehaviour {
                 Trajectory.GetComponent<LaunchFood>().cutFood(other.gameObject);
             // music
             if(CutAudio)
-                CutAudio.Play();
+                CutAudio.PlayOneShot(CutAudio.clip);
         }
         if (other.CompareTag("bomb"))
         {
@@ -28,7 +33,12 @@ public class Cut : MonoBehaviour {
                 Trajectory.GetComponent<LaunchFood>().cutBomb(other.gameObject);
             // music
             if (BombAudio)
-                BombAudio.Play();
+            {
+                BombAudio.PlayOneShot(BombAudio.clip);
+                GameObject ExplodeInstance = Pool.GetGameObject();
+                ExplodeInstance.transform.localPosition = other.transform.position;
+                ExplodeInstance.GetComponentInChildren<ParticleSystem>().Play();
+            }
         }
     }
 }
