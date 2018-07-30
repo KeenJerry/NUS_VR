@@ -13,6 +13,7 @@ public class PauseMenu : MonoBehaviour {
 
     public Transform cursor;
     public TextMesh volumnValue;
+    public AudioSource[] audios;
 
 	// Update is called once per frame
 	void Update () {
@@ -57,6 +58,9 @@ public class PauseMenu : MonoBehaviour {
                 else if (volumn <= 40) volumn = 100;
                 else volumn = 140 - volumn;
                 volumnValue.text = "" + volumn;
+
+                foreach (AudioSource audio in audios)
+                    audio.volume = volumn / 100.0f;
             }
         }
         else
