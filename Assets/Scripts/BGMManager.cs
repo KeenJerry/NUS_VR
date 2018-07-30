@@ -15,6 +15,7 @@ public class BGMManager : MonoBehaviour {
     public AudioSource BGMStart;
     public AudioSource BGMWin;
     public AudioSource BGMLose;
+    private bool played;
 
     public GameObject Trajetory;
     public LaunchFood LaunchFoodComponent;
@@ -58,6 +59,7 @@ public class BGMManager : MonoBehaviour {
                             }
                         }
                         break;
+                        played = false;
                     }
                     
                 case LaunchFood.Status.LOSE:
@@ -65,8 +67,11 @@ public class BGMManager : MonoBehaviour {
                         if (BGMLose)
                         {
                             BGMStart.Stop();
-                            if (!BGMLose.isPlaying)
+                            if (!BGMLose.isPlaying && !played)
+                            {
                                 BGMLose.Play();
+                                played = true;
+                            }
                         }
                         break;
                     }
@@ -76,8 +81,11 @@ public class BGMManager : MonoBehaviour {
                         if (BGMWin)
                         {
                             BGMStart.Stop();
-                            if (!BGMWin.isPlaying)
+                            if (!BGMWin.isPlaying && !played)
+                            {
                                 BGMWin.Play();
+                                played = true;
+                            }
                         }
                         break;
                     }
