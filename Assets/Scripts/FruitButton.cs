@@ -26,10 +26,12 @@ public class FruitButton : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (!piece[0] && resetFlag)
+        if (icon == null) createIcon();
+        if (!piece[0].activeSelf && resetFlag)
         {
             icon.SetActive(true);
             for (int i = 0; i < 3; i++) piece[i].SetActive(false);
+            resetFlag = false;
         }
 
         if (icon.activeSelf)
